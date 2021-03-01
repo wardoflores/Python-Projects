@@ -11,10 +11,25 @@ def get_dir(filename):
         Returns Miscellaneous if Parent is not found
     """
     ext = filename.suffix[1:]
+    # TODO: make the Directories more compact in ext.
+    for key,val in dirs.items():
+
+    for filename in ext:
+        if filename == :
+            ext = dirs[jpeg, jpg, png, tiff, gif]
+
+    '''
+    pictures = dirs[jpeg, jpg, png, tiff, gif]
+    videos = dirs[mp4, mkv, mov, webm, flv]
+    music = dirs[mp3, ogg, wav, flac]
+    documents = dirs[pdf, doc, docx, ppt, ods]
+    ebooks = dirs[epub]
+    '''
+
     return dirs.get(ext, "Miscellaneous")
 
 
-dirs = {
+dirs = {  
     # Pictures
     "jpeg": r"D:\Pictures\Transfer\jpeg",
     "png": r"D:\Pictures\Transfer\png",
@@ -42,6 +57,9 @@ dirs = {
     "ppt": r"C:\Users\Flores\Documents\Transfer",
     "ods": r"C:\Users\Flores\Documents\Transfer",
 
+    # Ebooks
+    "epub": r"C:\Users\Flores\Documents\.E books\temp"
+
 }
 
 if len(argv) != 2:
@@ -65,4 +83,3 @@ for filename in PATH.iterdir():
             destination.mkdir()
 
         move(str(path_to_file), str(destination))
-
