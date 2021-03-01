@@ -16,42 +16,32 @@ def get_dir(filename):
 
 dirs = {
     # Pictures
-    "jpeg": "Pictures",
-    "png": "Pictures",
-    "jpg": "Pictures",
-    "tiff": "Pictures",
-    "gif": "Pictures",
+    "jpeg": r"D:\Pictures\Transfer\jpeg",
+    "png": r"D:\Pictures\Transfer\png",
+    "jpg": r"D:\Pictures\Transfer\jpg",
+    "tiff": r"D:\Pictures\Transfer\tiff",
+    "gif": r"D:\Pictures\Transfer\gif",
 
     # Videos
-    "mp4": "Videos",
-    "mkv": "Videos",
-    "mov": "Videos",
-    "webm": "Videos",
-    "flv": "Videos",
+    "mp4": r"C:\Users\Flores\Videos\Transfer",
+    "mkv": r"C:\Users\Flores\Videos\Transfer",
+    "mov": r"C:\Users\Flores\Videos\Transfer",
+    "webm": r"C:\Users\Flores\Videos\Transfer",
+    "flv": r"C:\Users\Flores\Videos\Transfer",
 
     # Music
-    "mp3": "Music",
-    "ogg": "Music",
-    "wav": "Music",
-    "flac": "Music",
-
-    # Program Files
-    "py": "Program Files",
-    "js": "Program Files",
-    "cpp": "Program Files",
-    "html": "Program Files",
-    "css": "Program Files",
-    "c": "Program Files",
-    "sh": "Program Files",
+    "mp3": r"D:\Music",
+    "ogg": r"D:\Music",
+    "wav": r"D:\Music",
+    "flac": r"D:\Music",
 
     # Documents
-    "pdf": "Documents",
-    "doc": "Documents",
-    "docx": "Documents",
-    "txt": "Documents",
-    "ppt": "Documents",
-    "ods": "Documents",
-    "csv": "Documents"
+    "pdf": r"C:\Users\Flores\Documents\Transfer",
+    "doc": r"C:\Users\Flores\Documents\Transfer",
+    "docx": r"C:\Users\Flores\Documents\Transfer",
+    "ppt": r"C:\Users\Flores\Documents\Transfer",
+    "ods": r"C:\Users\Flores\Documents\Transfer",
+
 }
 
 if len(argv) != 2:
@@ -75,3 +65,4 @@ for filename in PATH.iterdir():
             destination.mkdir()
 
         move(str(path_to_file), str(destination))
+
