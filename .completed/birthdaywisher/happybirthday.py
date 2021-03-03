@@ -7,6 +7,7 @@
 
 import random
 import time
+import os
 
 
 banner1 = """
@@ -17,8 +18,8 @@ banner1 = """
 ██▌▐▀▐█ ▪▐▌▐█▪·•▐█▪·• ▐█▀·.    ██▄▪▐█▐█▌▐█•█▌ ▐█▌·██▌▐▀██. ██ ▐█ ▪▐▌ ▐█▀·.
 ▀▀▀ · ▀  ▀ .▀   .▀     ▀ •     ·▀▀▀▀ ▀▀▀.▀  ▀ ▀▀▀ ▀▀▀ ·▀▀▀▀▀•  ▀  ▀   ▀ •
 \033[1;m
-    Happy Birthday | Shall we play a game..?
-    I like to See Ya hacking... *** :)
+    ~Birthday song code~
+    (Type name after intro :D)
         """
 
 banner2 = """
@@ -31,26 +32,24 @@ banner2 = """
   ▀     █    ▀     ▀                        ▀              ▀           █
        ▀                                                              ▀
 \033[1;m
-    Happy Birthday | Shall we play a game..?
-    I like to See Ya hacking... *** :)
+    Happy Birthday! 
+    (type name after intro :D)
         """
 
-stream = (banner1, banner2)
-
-print random.choice(stream)
+print(banner1.center(os.get_terminal_size().columns))
 time.sleep(1)
 
 
 def happy_birthday():
 
-    first_name = raw_input("\n[+] First name: ")
-    print "\n"
+    first_name = input("[+] First name: ")
+    print("\n")
 
-    happy = "Happy Birthday to You.."
+    happy = "Happy Birthday to You..".center(os.get_terminal_size().columns)
 
-    print "###########################################"
-    print "\t" + "Happy Birthday " + (first_name.capitalize())
-    print "###########################################\n"
+    print("###########################################\n".center(os.get_terminal_size().columns))
+    print("Happy Birthday ".center(os.get_terminal_size().columns) + (first_name.capitalize().center(os.get_terminal_size().columns)) + "\n")
+    print("###########################################\n".center(os.get_terminal_size().columns))
     time.sleep(2)
 
     for x in range(2):
@@ -59,19 +58,19 @@ def happy_birthday():
         print(happy)
         time.sleep(1.5)
 
-        print "Happy Birthday", first_name.capitalize(), "..!"
+        print("Happy Birthday".center(os.get_terminal_size().columns), first_name.capitalize().center(os.get_terminal_size().columns))
         time.sleep(1)
-        print(happy) + "\n"
+        print(happy + "\n".center(os.get_terminal_size().columns))
         time.sleep(1)
 
         for x in range(3):
-            print "Hip Hip Hooray..!\n"
+            print("Hip Hip Hooray..!\n".center(os.get_terminal_size().columns))
             time.sleep(1)
 
-    print "\t###########################################"
-    print "\t\tHappy Birthday", first_name.capitalize(), "..!"
-    print "\t\tHave some fun today :) "
-    print "\t###########################################\n"
+    print("###########################################".center(os.get_terminal_size().columns))
+    print("Happy Birthday".center(os.get_terminal_size().columns), first_name.capitalize().center(os.get_terminal_size().columns))
+    print("Have some fun today :) ".center(os.get_terminal_size().columns))
+    print("###########################################\n".center(os.get_terminal_size().columns))
 
 
 happy_birthday()
