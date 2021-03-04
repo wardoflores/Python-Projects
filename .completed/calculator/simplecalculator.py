@@ -1,6 +1,9 @@
 #! python3
+# Simple Calculator with Arithmetic features.
+# Eduardo Jose Flores III: https://github.com/Coalemus
+# Copyright (c) Eduardo Jose Flores III
 
-# Program make a simple calculator
+
 
 # This function adds two numbers
 def add(x, y):

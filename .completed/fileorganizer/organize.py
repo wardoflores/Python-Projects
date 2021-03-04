@@ -1,4 +1,10 @@
 #! python3
+#Description: This Python script organizes files in a given path
+# Author: Gagan Deep Singh @GaganGulyani
+# Github Repo: https://github.com/gagangulyani/File-Organizer
+# Created Aug 26, 2020
+
+
 from pathlib import Path
 from sys import argv
 from shutil import move
