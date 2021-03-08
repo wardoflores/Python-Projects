@@ -1,3 +1,4 @@
+@rem Sized for a half full window.
 echo off
 echo =================================================================
 echo .
