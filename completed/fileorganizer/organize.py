@@ -27,7 +27,7 @@ def get_dir(filename):
     music = dirs[mp3, ogg, wav, flac]
     documents = dirs[pdf, doc, docx, ppt, ods]
     ebooks = dirs[epub]
-    '''
+'''
 
 dirs = {  
     # Pictures

