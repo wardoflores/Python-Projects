@@ -58,7 +58,7 @@ dirs = {
     "ods": r"C:\Users\Flores\Documents\Transfer",
 
     # Ebooks
-    "epub": r"C:\Users\Flores\Documents\.E books\temp"
+    "epub": r"D:\ebooks\temp"
 
 }
 
