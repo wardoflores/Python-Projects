@@ -1,4 +1,7 @@
 #! python3
+# source: youtube.com/watch?v=jBxRGcDmfWA
+
+
 import pyautogui, time
 time.sleep(5)
 f = open(r"C:\Users\Flores\Joey-Repositories\Python-Projects\completed\spambot\navyspamtext.txt", "r")
