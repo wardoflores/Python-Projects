@@ -1,5 +1,6 @@
 #! python3
 # Simple Calculator with Arithmetic features.
+# Followed tutorial: https://www.programiz.com/python-programming/examples/calculator
 # Eduardo Jose Flores III: https://github.com/Coalemus
 # Copyright (c) Eduardo Jose Flores III
 
