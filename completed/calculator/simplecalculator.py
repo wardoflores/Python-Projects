@@ -1,10 +1,8 @@
 #! python3
 # Simple Calculator with Arithmetic features.
-# Followed tutorial: https://www.programiz.com/python-programming/examples/calculator
+# Source: https://www.programiz.com/python-programming/examples/calculator
 # Eduardo Jose Flores III: https://github.com/Coalemus
 # Copyright (c) Eduardo Jose Flores III
-
-
 
 # This function adds two numbers
 def add(x, y):
@@ -52,10 +50,16 @@ def runtime():
             elif choice == '4':
                 print(num1, "/", num2, "=", divide(num1, num2))
             # break
-            # Add break if you only want to execute code once, left it off
-            # because it auto terminates when initiated in the Terminal.
+            # Add break if you only want to execute code once, 
+            # left it off because it auto terminates when initiated in the Terminal.
         else:
             print("Invalid Input")
+
+        end = input("if you want to exit, type 1: ")
+        if end == '1':
+            return exit()
+        else:
+            runtime()
 
 runtime()
 
