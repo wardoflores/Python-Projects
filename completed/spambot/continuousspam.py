@@ -1,16 +1,21 @@
 #! python3
 # source: youtube.com/watch?v=jBxRGcDmfWA
-
+# source: 
 
 import pyautogui, time
+from pynput import keyboard 
+import sys
 
-time.sleep(1) # Lowered because of lower text filesize.
-while True:
-    f = open(r"C:\Users\Flores\Joey-Repositories\Python-Projects\completed\spambot\simplespam.txt", "r")
+text = "Pog"
 
-    for word in f:
-        pyautogui.typewrite(word)
+def on_press(key):
+    if '{0}'.format(key) == "Key.esc":
+        sys.exit()
+    elif '{0}'.format(key) == "Key.enter":
+        # for word in f:
+        pyautogui.typewrite(text)
         pyautogui.press("enter")
-
-    if KeyboardInterrupt:
-        False
+        time.sleep(0)        
+    
+with keyboard.Listener(on_press=on_press) as Listener:
+    Listener.join()
