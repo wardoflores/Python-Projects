@@ -41,6 +41,11 @@ def process():
     time.sleep(5)
 
 
+    print("Examine your senses, is it truly genuine?")
+    print("\n")
+    time.sleep(5)
+
+
     print("Recall your principles.")
     print("\n")
     time.sleep(5)
