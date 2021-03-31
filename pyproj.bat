@@ -26,7 +26,8 @@ echo =================================================================
 doskey root=cd C:\Windows\system32
 doskey calculator=python "calculator project directory"
 doskey simplespam=python "simplespam project directory"
-doskey navyspam=python "navyspam project directory"
+doskey filespam=python "navyspam project directory"
+doskey spam=python "spam project directory"
 doskey keylogger=python "keylogger project directory"
 doskey birthday=python "birthday project directory"
 doskey meditate=python "meditate project directory"
