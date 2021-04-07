@@ -60,6 +60,19 @@ def process():
     print("\n")
     time.sleep(5)
 
+    print("Recall knowledge from books.")
+    print("\n")
+    time.sleep(5)
+
+    print("Recall knowledge from hobbies.")
+    print("\n")
+    time.sleep(5)
+
+    print("Recall knowledge from memories.")
+    print("\n")
+    time.sleep(5)
+
+    
 process()
 
 restart = input("Do you want to be reminded once again? Type Yes to be reminded: ")
