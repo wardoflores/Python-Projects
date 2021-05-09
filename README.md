@@ -17,9 +17,9 @@ Add the project module's directories to the pyproj.bat file.
 * Keylogger - made with code from various Repositories.
 * Birthday Wisher - Bulls Eye: https://github.com/BullsEye0
 * Selenium Scripts 
-- https://www.geeksforgeeks.org/selenium-python-basics
-- https://www.geeksforgeeks.org/automating-google-meet-using-selenium-in-python/
-- https://www.geeksforgeeks.org/browser-automation-using-selenium/
+    - https://www.geeksforgeeks.org/selenium-python-basics
+    - https://www.geeksforgeeks.org/automating-google-meet-using-selenium-in-python/
+    - https://www.geeksforgeeks.org/browser-automation-using-selenium/
 
 
 
