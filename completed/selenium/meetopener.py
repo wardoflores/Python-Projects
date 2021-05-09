@@ -86,3 +86,6 @@ driver.get('https://meet.google.com/') # TODO: Automate scraping for meeting roo
 turnOffMicCam()
 AskToJoin() # Comment this function to toggle auto joining or not.
 joinNow()
+
+time.sleep(5)
+browser.close()
