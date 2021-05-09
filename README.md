@@ -2,7 +2,7 @@
 Repository for Python Projects.
 
 # Usage
-Add the project module's directories to the pyproj.bat file.
+Add the project module's directories to the pyproj.bat file. Also add a crdntl module for logging in Selenium scripts.
 
 # List of Projects
 
