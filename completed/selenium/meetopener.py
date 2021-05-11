@@ -11,8 +11,9 @@ opt = Options()
 opt.binary_location = brave_path
 # opt.add_argument("--incognito") OPTIONAL
 # opt.add_argument("--headless") OPTIONAL
-opt.add_argument('--disable-blink-features=AutomationControlled')
 opt.add_argument('--start-maximized')
+opt.add_experimental_option('excludeSwitches', ['enable-logging'])
+opt.add_argument('--disable-blink-features=AutomationControlled')
 opt.add_experimental_option("prefs", {
   
     "profile.default_content_setting_values.media_stream_mic": 1,
@@ -22,30 +23,6 @@ opt.add_experimental_option("prefs", {
 })
 
 driver = webdriver.Chrome(executable_path=driver_path, options=opt)
-driver.maximize_window()
-
-# explicit function to turn off mic and cam
-def turnOffMicCam():
-  
-    # turn off Microphone
-    time.sleep(2)
-    driver.find_element_by_xpath( # TODO: change xpath
-        '//*[@id="yDmH0d"]/c-wiz/div/div/div[8]/div[3]/div/div/div[2]/div/div[1]/div[1]/div[1]/div/div[4]/div[1]/div/div/div').click()
-    driver.implicitly_wait(3000)
-  
-    # turn off camera
-    time.sleep(1)
-    driver.find_element_by_xpath(
-        '//*[@id="yDmH0d"]/c-wiz/div/div/div[8]/div[3]/div/div/div[2]/div/div[1]/div[1]/div[1]/div/div[4]/div[2]/div/div').click()
-    driver.implicitly_wait(3000)
-
-def AskToJoin():
-    # Ask to Join meet
-    time.sleep(5)
-    driver.implicitly_wait(2000)
-    driver.find_element_by_css_selector(
-        'div.uArJ5e.UQuaGc.Y5sE8d.uyXBBb.xKiqt').click()
-    # Ask to join and join now buttons have same xpaths
 
 def Glogin(mail, pswrd):
     # Login Page
@@ -68,6 +45,29 @@ def Glogin(mail, pswrd):
     driver.get('https://google.com/')
     driver.implicitly_wait(100)
 
+# explicit function to turn off mic and cam
+def turnOffMicCam():
+  
+    # turn off Microphone
+    time.sleep(2)
+    driver.find_element_by_xpath( 
+        '//*[@id="yDmH0d"]/c-wiz/div/div/div[9]/div[3]/div/div/div[2]/div/div[1]/div[1]/div[1]/div/div[4]/div[1]/div/div/div').click()
+    driver.implicitly_wait(3000)
+  
+    # turn off camera
+    time.sleep(1)
+    driver.find_element_by_xpath(
+        '//*[@id="yDmH0d"]/c-wiz/div/div/div[9]/div[3]/div/div/div[2]/div/div[1]/div[1]/div[1]/div/div[4]/div[2]/div/div').click()
+    driver.implicitly_wait(3000)
+
+def AskToJoin():
+    # Ask to Join meet
+    time.sleep(5)
+    driver.implicitly_wait(2000)
+    driver.find_element_by_css_selector(
+        'div.uArJ5e.UQuaGc.Y5sE8d.uyXBBb.xKiqt').click()
+    # Ask to join and join now buttons have same xpaths
+
 def joinNow():
     # Join meet
     print(1)
@@ -79,12 +79,17 @@ def joinNow():
 
 # login to Google account
 Glogin(mail_address, passgoog)
-  
-# go to google meet
-driver.get('https://meet.google.com/') # TODO: Automate scraping for meeting room code.
+
+# Asks for meeting link
+meetinglink = str(input("meeting url: "))
+
+time.sleep(1)
+
+# Go to meeting
+driver.get(meetinglink) # TODO: Automate scraping for meeting room code.
 turnOffMicCam()
-AskToJoin() # Comment this function to toggle auto joining or not.
+AskToJoin()
 joinNow()
 
-time.sleep(5)
-browser.close()
+# time.sleep(5)
+# browser.close()
