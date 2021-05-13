@@ -1,6 +1,7 @@
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 import time
+import pyautogui
 from crdntl import mail_address, passgoog
 
 brave_path = r"C:\Program Files\BraveSoftware\Brave-Browser\Application\brave.exe"
@@ -80,13 +81,15 @@ def joinNow():
 # login to Google account
 Glogin(mail_address, passgoog)
 
-# Asks for meeting link
-meetinglink = str(input("meeting url: "))
+# Asks for meeting link (practice link: https://meet.google.com/sdf-wqer-sdf)
+meetinglink = pyautogui.prompt(title="Google meet automation", text="Input meeting link:")
+# TODO: Automate scraping for meeting room code,
+#  maybe script a link scraper and append link here.
 
 time.sleep(1)
 
 # Go to meeting
-driver.get(meetinglink) # TODO: Automate scraping for meeting room code.
+driver.get(meetinglink) 
 turnOffMicCam()
 AskToJoin()
 joinNow()
