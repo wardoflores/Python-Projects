@@ -71,28 +71,33 @@ def AskToJoin():
 
 def joinNow():
     # Join meet
-    print(1)
+    print("...Joined Session!")
     time.sleep(5)
     driver.implicitly_wait(2000)
     driver.find_element_by_css_selector(
         'div.uArJ5e.UQuaGc.Y5sE8d.uyXBBb.xKiqt').click()
-    print(1)
+
+def closing():
+    close = driver.close()
+
+    closeprompt = pyautogui.confirm(buttons="OK, cancel")
+
+    if closeprompt == "OK":
+        close
+    else:
+        pass
 
 # login to Google account
 Glogin(mail_address, passgoog)
 
-# Asks for meeting link (practice link: https://meet.google.com/sdf-wqer-sdf)
+# Asks for meeting link (practice link: https://meet.google.com/xby-zehb-ncf)
 meetinglink = pyautogui.prompt(title="Google meet automation", text="Input meeting link:")
 # TODO: Automate scraping for meeting room code,
 #  maybe script a link scraper and append link here.
-
-time.sleep(1)
 
 # Go to meeting
 driver.get(meetinglink) 
 turnOffMicCam()
 AskToJoin()
 joinNow()
-
-# time.sleep(5)
-# browser.close()
+closing()

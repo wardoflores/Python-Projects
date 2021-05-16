@@ -20,6 +20,11 @@ Add the project module's directories to the pyproj.bat file. Also add a crdntl m
     - https://www.geeksforgeeks.org/selenium-python-basics
     - https://www.geeksforgeeks.org/automating-google-meet-using-selenium-in-python/
     - https://www.geeksforgeeks.org/browser-automation-using-selenium/
+* Web server
+    - https://defn.io/2018/02/25/web-app-from-scratch-01/
+    - https://defn.io/2018/03/04/web-app-from-scratch-02/
+    - https://defn.io/2018/03/20/web-app-from-scratch-03/
+    - https://defn.io/2018/05/12/web-app-from-scratch-04/
 
 
 

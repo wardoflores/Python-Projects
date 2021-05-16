@@ -3,3 +3,5 @@ completed/keylogger/save.txt
 completed/selenium/crdntl.py
 completed/selenium/__pycache__/crdntl.cpython-38.pyc
 completed/selenium/geckodriver.log
+completed/server/__pycache__/headers.cpython-38.pyc
+completed/server/__pycache__/request.cpython-38.pyc
