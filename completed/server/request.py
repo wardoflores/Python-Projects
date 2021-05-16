@@ -28,8 +28,6 @@ def iter_lines(sock: socket.socket, bufsize: int = 16_384) -> typing.Generator[b
             except IndexError:
                 break
 
-
-
 class BodyReader(io.IOBase):
     def __init__(self, sock: socket.socket, *, buff: bytes = b"", bufsize: int = 16_384) -> None:
         self._sock = sock
@@ -84,7 +82,6 @@ class Request(typing.NamedTuple):
             try:
                 line = next(lines)
             except StopIteration as e:
-                # StopIteration.value contains the return value of the generator.
                 buff = e.value
                 break
 
@@ -96,5 +93,3 @@ class Request(typing.NamedTuple):
 
         body = BodyReader(sock, buff=buff)
         return cls(method=method.upper(), path=path, headers=headers, body=body)
-
-

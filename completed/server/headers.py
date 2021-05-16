@@ -2,6 +2,10 @@ import typing
 
 from collections import defaultdict
 
+HeadersDict = typing.Dict[str, typing.List[str]]
+HeadersGenerator = typing.Generator[typing.Tuple[str, str], None, None]
+
+
 class Headers:
     def __init__(self) -> None:
         self._headers = defaultdict(list)
@@ -17,3 +21,8 @@ class Headers:
             return self.get_all(name)[-1]
         except IndexError:
             return default
+
+    def __iter__(self) -> HeadersGenerator:
+        for name, values in self._headers.items():
+            for value in values:
+                yield name, value
