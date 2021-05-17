@@ -11,6 +11,7 @@ echo Current Python APIs are:
 echo. 
 echo (-._.)- "yo here."
 echo discordbot 
+echo wolfram
 echo.
 echo =================================================================
 echo -----------------------------------------------------------------
@@ -51,6 +52,7 @@ doskey apacherun=C:\Apache24\bin\httpd.exe -k start
 doskey apachestop=C:\Apache24\bin\httpd.exe -k stop
 doskey apachereboot=C:\Apache24\bin\httpd.exe -k restart
 doskey calculator=python "calculator project directory"
+doskey wolfram=python "wolframalpha project directory"
 doskey simplespam=python "simplespam project directory"
 doskey filespam=python "navyspam project directory"
 doskey spam=python "spam project directory"
