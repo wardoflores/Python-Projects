@@ -9,9 +9,10 @@ echo =================================================================
 echo.
 echo Current Python APIs are:
 echo. 
-echo (-._.)- "yo here."
+echo (-._.)- "Can't link, projects are in a separate repository."
 echo discordbot 
 echo wolfram
+echo voassist
 echo.
 echo =================================================================
 echo -----------------------------------------------------------------
@@ -40,6 +41,7 @@ echo .
 echo Current batch scripts are:
 echo .
 echo root
+echo pyserver
 echo apache
 echo apacherun
 echo apachestop
@@ -51,6 +53,7 @@ doskey apache=cd C:\Apache24\bin
 doskey apacherun=C:\Apache24\bin\httpd.exe -k start
 doskey apachestop=C:\Apache24\bin\httpd.exe -k stop
 doskey apachereboot=C:\Apache24\bin\httpd.exe -k restart
+doskey pyserver=python "pyserver project directory"
 doskey calculator=python "calculator project directory"
 doskey wolfram=python "wolframalpha project directory"
 doskey simplespam=python "simplespam project directory"

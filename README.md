@@ -10,11 +10,11 @@ Add the project module's directories to the pyproj.bat file. Also add a crdntl m
 
 * meditation - made by myself
 * speedprinter - made by myself
+* Keylogger - made with code from various Repositories.
 * Clicker - https://www.pythonpool.com/python-auto-clicker/
 * Calculator - https://www.programiz.com/python-programming/examples/calculator
 * File Organizer - gagangulyani: https://github.com/gagangulyani/File-Organizer
 * Spam Bot - https://www.youtube.com/watch?v=jBxRGcDmfWA / https://www.youtube.com/watch?v=-zd1UI2JTuk
-* Keylogger - made with code from various Repositories.
 * Birthday Wisher - Bulls Eye: https://github.com/BullsEye0
 * Selenium Scripts 
     - https://www.geeksforgeeks.org/selenium-python-basics
@@ -25,7 +25,12 @@ Add the project module's directories to the pyproj.bat file. Also add a crdntl m
     - https://defn.io/2018/03/04/web-app-from-scratch-02/
     - https://defn.io/2018/03/20/web-app-from-scratch-03/
     - https://defn.io/2018/05/12/web-app-from-scratch-04/
-
+* Paraphraser
+    - https://github.com/Anu-bhav/Paraphrasing
+* Voice Assistant
+    - https://www.geeksforgeeks.org/personal-voice-assistant-in-python/
+* Stock Predicter
+    - https://towardsdatascience.com/predicting-stock-prices-with-python-ec1d0c9bece1
 
 
 ## In-progress
