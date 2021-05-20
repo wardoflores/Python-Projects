@@ -6,3 +6,8 @@ completed/selenium/geckodriver.log
 completed/server/__pycache__/headers.cpython-38.pyc
 completed/server/__pycache__/request.cpython-38.pyc
 completed/server/__pycache__/response.cpython-38.pyc
+completed/stockpredict/__pycache__/crdntl.cpython-38.pyc
+completed/stockpredict/crdntl.py
+completed/stockpredict/Exports/BTUExport.csv
+completed/stockpredict/Exports/PLYAExport.csv
+completed/stockpredict/Exports/RIDEExport.csv
