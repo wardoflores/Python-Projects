@@ -1,5 +1,6 @@
-from selenium import webdriver
 import time
+from selenium import webdriver
+from selenium.webdriver.chrome.options import Options
 
 driver_path = r"C:\webdriver\chromedriver.exe"
 brave_path = r"C:\Program Files\BraveSoftware\Brave-Browser\Application\brave.exe"
@@ -12,7 +13,7 @@ opt.add_argument('--start-maximized')
 opt.add_experimental_option('excludeSwitches', ['enable-logging'])
 opt.add_argument('--disable-blink-features=AutomationControlled')
 
-# Create new Instance of Chrome
+# Create new Instance of Brave
 browser = webdriver.Chrome(executable_path=driver_path, options=opt)
 
 browser.get("https://www.google.com")
