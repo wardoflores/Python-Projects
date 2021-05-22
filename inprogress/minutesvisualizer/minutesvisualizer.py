@@ -1,6 +1,5 @@
 import tkinter
 
-
 # code an application that visualizes the key events made at a meeting;
 
  
