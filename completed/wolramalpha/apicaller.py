@@ -10,14 +10,23 @@ client = wolframalpha.Client(app_id)
 
 while True:
 
-    # Taking input from user
-    question = input('Question: ')
+    try:
 
-    # Stores the response from 
-    # wolf ram alpha
-    res = client.query(question)
+        # Taking input from user
+        question = input('Question: ')
 
-    # Includes only text from the response
-    answer = next(res.results).text
+        # Stores the response from 
+        # wolf ram alpha
+        res = client.query(question)
+
+        # Includes only text from the response
+        answer = next(res.results).text
     
-    print(answer)
+        print(answer)
+    
+    except StopIteration:
+
+        print("Cannot be answered.")
+
+        
+
