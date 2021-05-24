@@ -2,8 +2,7 @@
 echo off
 echo =================================================================
 echo .
-echo Hello (~*v*)~
-echo Run using aliases for convenience.
+echo 
 echo .
 echo =================================================================
 echo.

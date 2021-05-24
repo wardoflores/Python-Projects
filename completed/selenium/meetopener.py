@@ -7,7 +7,6 @@ from crdntl import mail_address, passgoog
 brave_path = r"C:\Program Files\BraveSoftware\Brave-Browser\Application\brave.exe"
 driver_path = r"C:\webdriver\chromedriver.exe"
 
-
 opt = Options()
 opt.binary_location = brave_path
 # opt.add_argument("--incognito") OPTIONAL
@@ -96,7 +95,7 @@ meetinglink = pyautogui.prompt(title="Google meet automation", text="Input meeti
 #  maybe script a link scraper and append link here.
 
 # Go to meeting
-driver.get(meetinglink) 
+driver.get(meetinglink)
 turnOffMicCam()
 AskToJoin()
 joinNow()
