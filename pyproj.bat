@@ -11,6 +11,7 @@ echo.
 echo (-._.)- "Can't link, projects are in a separate repository."
 echo discordbot 
 echo wolfram
+echo TTS
 echo voassist
 echo.
 echo =================================================================
@@ -63,3 +64,5 @@ doskey keylogger=python "keylogger project directory"
 doskey birthday=python "birthday project directory"
 doskey meditate=python "meditate project directory"
 doskey meet=python "meetopener project directory"
+doskey TTS=python "TTS project directory"
+doskey voassist=python "voassist project directory"
