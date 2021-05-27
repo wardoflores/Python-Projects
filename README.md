@@ -25,8 +25,6 @@ Add the project module's directories to the pyproj.bat file. Also add a crdntl m
     - https://defn.io/2018/03/04/web-app-from-scratch-02/
     - https://defn.io/2018/03/20/web-app-from-scratch-03/
     - https://defn.io/2018/05/12/web-app-from-scratch-04/
-* Paraphraser
-    - https://github.com/Anu-bhav/Paraphrasing
 * Voice Assistant
     - https://www.geeksforgeeks.org/personal-voice-assistant-in-python/
 * Stock Predicter
