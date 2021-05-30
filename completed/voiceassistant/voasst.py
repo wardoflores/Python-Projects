@@ -6,7 +6,7 @@ import os # to save/open files
 import wolframalpha # to calculate strings into formula
 from selenium import webdriver # to control browser operations
 from selenium.webdriver.chrome.options import Options
-  
+
 num = 1
 def assistant_speaks(output):
     global num
