@@ -53,9 +53,11 @@ def happy_birthday():
     time.sleep(2)
 
     for x in range(2):
-        print(happy)
+        x = print(happy)
+        
+        x
         time.sleep(2)
-        print(happy)
+        x
         time.sleep(1.5)
 
         print("Happy Birthday".center(os.get_terminal_size().columns), first_name.capitalize().center(os.get_terminal_size().columns))

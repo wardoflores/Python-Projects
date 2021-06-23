@@ -1,4 +1,6 @@
 #! python3
+# Description: Script to guide meditation.
+
 import time
 '''
 Guides you through the process of meditation.
