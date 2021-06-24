@@ -1,3 +1,6 @@
+#! python3
+# Description: Voice assistant that types out what you say. TODO
+
 # importing speech recognition package from google api
 import speech_recognition as sr 
 import playsound # to play saved mp3 file
