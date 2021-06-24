@@ -12,6 +12,7 @@ Add the project module's directories to the pyproj.bat file. Also add a crdntl m
 * speedprinter - made by myself
 * Keylogger - made with code from various Repositories.
 * Clicker - https://www.pythonpool.com/python-auto-clicker/
+* Idleclicker - https://www.reddit.com/r/ProgrammerHumor/comments/o6jjz5/when_the_company_i_work_for_removed_the_ability/
 * Calculator - https://www.programiz.com/python-programming/examples/calculator
 * File Organizer - gagangulyani: https://github.com/gagangulyani/File-Organizer
 * Spam Bot - https://www.youtube.com/watch?v=jBxRGcDmfWA / https://www.youtube.com/watch?v=-zd1UI2JTuk
