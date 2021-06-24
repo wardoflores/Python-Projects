@@ -1,3 +1,6 @@
+#! python3
+# Description: Voice Assistant that could search the web and query Wolfram Alpha.
+
 # importing speech recognition package from google api
 import speech_recognition as sr 
 import playsound # to play saved mp3 file
@@ -153,11 +156,6 @@ def process_text(input):
   
         elif "who made you" in input or "created you" in input:
             speak = "I have been created by Eduardo Flores."
-            assistant_speaks(speak)
-            return
-  
-        elif "lurl" in input:
-            speak = """lurl lurl lurl lurl lurl lurl lurl lurl lurl lurl lurl lurl ."""
             assistant_speaks(speak)
             return
   
