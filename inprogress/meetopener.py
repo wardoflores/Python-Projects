@@ -92,7 +92,12 @@ Glogin(mail_address, passgoog)
 # Asks for meeting link (practice link: https://meet.google.com/xby-zehb-ncf)
 meetinglink = pyautogui.prompt(title="Google meet automation", text="Input meeting link:")
 # TODO: Automate scraping for meeting room code,
-#  maybe script a link scraper and append link here.
+#  script a link scraper and append link here.
+
+# pyautogui.locateOnScreen('meetingcode.png', region=(0,0,0,0))
+# pyautogui.doubleClick()
+# pyautogui.hotkey()
+# pyautogui.typewrite() paste into input prompt
 
 # Go to meeting
 driver.get(meetinglink)
