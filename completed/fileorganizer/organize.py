@@ -1,6 +1,6 @@
 #! python3
 # Description: This Python script organizes files in a given path
-# Usage: python organize <dir_path>
+# Usage: python organize.py <dir_path>
 # Author: Gagan Deep Singh @GaganGulyani
 # Github Repo: https://github.com/gagangulyani/File-Organizer
 # Created Aug 26, 2020
