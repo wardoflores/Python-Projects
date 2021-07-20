@@ -9,6 +9,7 @@ import os # to save/open files
 import wolframalpha # to calculate strings into formula
 from selenium import webdriver # to control browser operations
 from selenium.webdriver.chrome.options import Options
+from threading import Thread
 
 num = 1
 def assistant_speaks(output):
@@ -195,24 +196,31 @@ def process_text(input):
             search_web(input)
   
 # Driver Code
-if __name__ == "__main__":
-    assistant_speaks("What's your name, Human?")
-    # name ='Human'
-    name = get_audio()
-    assistant_speaks("Hello, " + name + '.')
-      
-    while(1):
-  
-        assistant_speaks("What can i do for you?")
-        text = get_audio().lower()
-  
-        if text == 0:
-            continue
-  
-        if "exit" in str(text) or "bye" in str(text) or "sleep" in str(text) or "stop" in str(text):
-            assistant_speaks("Ok bye, "+ name+'.')
-            break
-  
-        # calling process text to process the query
-        process_text(text)
+def active_process():
+    if __name__ == "__main__":
+        assistant_speaks("What's your name, Human?")
+        # name ='Human'
+        name = get_audio()
+        assistant_speaks("Hello, " + name + '.')
+        
+        while(1):
+
+            assistant_speaks("What can i do for you?")
+            
+            text = get_audio().lower()
+
+            if text == 0:
+                continue
+
+            if "exit" in str(text) or "bye" in str(text) or "sleep" in str(text) or "stop" in str(text):
+                assistant_speaks("Ok bye, "+ name+'.')
+                break
+
+            # calling process text to process the query
+            process_text(text)
+
+Thread(target=active_process).start()
+
+
+
 

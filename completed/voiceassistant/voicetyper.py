@@ -1,5 +1,5 @@
 #! python3
-# Description: Voice assistant that types out what you say. TODO
+# Description: Voice assistant that types out what you say.
 
 # importing speech recognition package from google api
 import speech_recognition as sr 
@@ -65,10 +65,10 @@ name = get_audio()
 assistant_speaks("Hello, " + name + '.')
 
 while(1):
-  
+
         assistant_speaks("What can i do for you?")
         text = get_audio().lower()
-  
+
         if text == 0:
             continue
 
@@ -76,7 +76,8 @@ while(1):
             assistant_speaks(text)
             gui.typewrite(text[5:])
 
-  
+
         if "exit" in str(text) or "bye" in str(text) or "sleep" in str(text) or "stop" in str(text):
             assistant_speaks("Ok bye, "+ name+'.')
             break
+

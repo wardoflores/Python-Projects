@@ -2,7 +2,7 @@
 # Description: Prints Download speed and Upload speed.
 
 
-import speedtest
+import speedtest as speedtest
 import time
 import datetime
 
