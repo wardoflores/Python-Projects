@@ -17,6 +17,7 @@ def animate():
     sys.stdout.write('\rDone!     ')
 
 t = threading.Thread(target=animate)
+t.daemon=True
 t.start()
 
 #long process here
