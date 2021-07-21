@@ -21,7 +21,14 @@ echo calculator
 echo meditate
 echo birthday
 echo .
-echo Current batch scripts are:
+echo Current Android scripts are:
+echo .
+echo scrcpystart
+echo scrcpyrec
+echo adbcheck
+echo adbrestart
+echo .
+echo Current terminal scripts are:
 echo .
 echo root
 echo pyserver
@@ -57,5 +64,7 @@ rem scripts not inside of this repository
 doskey discordbot=CALL "discorbot.bat"
 doskey redditbot=CALL "redditbot.bat"
 doskey twitterbot=CALL "twitterbot.bat"
-doskey adbcheck=CALL "adbstart.bat"
-doskey scrcpy=CALL "scrcpystart.bat"
+doskey adbcheck=CALL "adbcheck.bat"
+doskey adbrestart=CALL "adbrestart.bat"
+doskey scrcpystart=CALL "scrcpystart.bat"
+doskey scrcpyrec=CALL "scrcpyrec.bat"
