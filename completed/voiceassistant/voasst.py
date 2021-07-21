@@ -219,6 +219,7 @@ def active_process():
             # calling process text to process the query
             process_text(text)
 
+t.daemon=True
 Thread(target=active_process).start()
 
 
