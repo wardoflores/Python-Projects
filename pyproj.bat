@@ -57,3 +57,5 @@ rem scripts not inside of this repository
 doskey discordbot=CALL "discorbot.bat"
 doskey redditbot=CALL "redditbot.bat"
 doskey twitterbot=CALL "twitterbot.bat"
+doskey adbcheck=CALL "adbstart.bat"
+doskey scrcpy=CALL "scrcpystart.bat"
