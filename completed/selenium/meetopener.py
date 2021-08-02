@@ -50,14 +50,20 @@ def turnOffMicCam():
   
     # turn off Microphone
     time.sleep(2)
-    driver.find_element_by_xpath( 
-        '//*[@id="yDmH0d"]/c-wiz/div/div/div[9]/div[3]/div/div/div[2]/div/div[1]/div[1]/div[1]/div/div[4]/div[1]/div/div/div').click()
+    pyautogui.keyDown('ctrl') # hold ctrl key
+    pyautogui.press('d') # press s key
+    pyautogui.keyUp('ctrl') # release ctrl key
+    # driver.find_element_by_xpath( 
+    #     '//*[@id="yDmH0d"]/c-wiz/div/div/div[9]/div[3]/div/div/div[4]/div/div/div[1]/div[1]/div/div[4]/div[2]/div/div').click()
     driver.implicitly_wait(3000)
   
     # turn off camera
     time.sleep(1)
-    driver.find_element_by_xpath(
-        '//*[@id="yDmH0d"]/c-wiz/div/div/div[9]/div[3]/div/div/div[2]/div/div[1]/div[1]/div[1]/div/div[4]/div[2]/div/div').click()
+    pyautogui.keyDown('ctrl') # hold ctrl key
+    pyautogui.press('e') # press s key
+    pyautogui.keyUp('ctrl') # release ctrl key
+    # driver.find_element_by_xpath(
+    #     '//*[@id="yDmH0d"]/c-wiz/div/div/div[9]/div[3]/div/div/div[4]/div/div/div[1]/div[1]/div/div[4]/div[1]/div/div/div').click()
     driver.implicitly_wait(3000)
 
 def AskToJoin():
