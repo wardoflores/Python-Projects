@@ -95,8 +95,15 @@ def closing():
 # login to Google account
 Glogin(mail_address, passgoog)
 
-# Asks for meeting link (practice link: https://meet.google.com/xby-zehb-ncf)
+# If code is not constant,
+# Prompt asks for meeting link (practice link: https://meet.google.com/xby-zehb-ncf)
+
+# If code is constant,
+# Comment 1st meetinglink variable, and uncomment 2nd meetinglink variable.
+
 meetinglink = pyautogui.prompt(title="Google meet automation", text="Input meeting link:")
+# meetinglink = https://meet.google.com/
+
 # TODO: Automate scraping for meeting room code,
 #  script a link scraper and append link here.
 
