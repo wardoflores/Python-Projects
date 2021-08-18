@@ -31,7 +31,6 @@ hour_now = str(hour_now_format[11:13])
 
 min_now_format = datetime.now().isoformat(timespec='minutes')   
 min_now = str(min_now_format[14:16])
-print("min now is: " + min_now)
 
 def Glogin(mail, pswrd):
     # Login Page
