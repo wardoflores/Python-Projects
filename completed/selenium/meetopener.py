@@ -1,6 +1,8 @@
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 import time
+import datetime
+from datetime import datetime
 import pyautogui
 from crdntl import mail_address, passgoog
 
@@ -23,6 +25,13 @@ opt.add_experimental_option("prefs", {
 })
 
 driver = webdriver.Chrome(executable_path=driver_path, options=opt)
+
+hour_now_format = datetime.now().isoformat(timespec='hours')   
+hour_now = str(hour_now_format[11:13])
+
+min_now_format = datetime.now().isoformat(timespec='minutes')   
+min_now = str(min_now_format[14:16])
+print("min now is: " + min_now)
 
 def Glogin(mail, pswrd):
     # Login Page
@@ -98,12 +107,6 @@ Glogin(mail_address, passgoog)
 # If code is not constant,
 # Prompt asks for meeting link (practice link: https://meet.google.com/xby-zehb-ncf)
 
-# If code is constant,
-# Comment 1st meetinglink variable, and uncomment 2nd meetinglink variable.
-
-meetinglink = pyautogui.prompt(title="Google meet automation", text="Input meeting link:")
-# meetinglink = https://meet.google.com/
-
 # TODO: Automate scraping for meeting room code,
 #  script a link scraper and append link here.
 
@@ -112,9 +115,113 @@ meetinglink = pyautogui.prompt(title="Google meet automation", text="Input meeti
 # pyautogui.hotkey()
 # pyautogui.typewrite() paste into input prompt
 
-# Go to meeting
-driver.get(meetinglink)
-turnOffMicCam()
-AskToJoin()
-joinNow()
-closing()
+# If code is constant,
+# Comment 1st meetinglink variable, and uncomment 2nd meetinglink variable.
+
+# meetinglink = pyautogui.prompt(title="Google meet automation", text="Input meeting link:")
+
+meetinglink1 = "https://meet.google.com/ojc-ykmb-wph" # Monday Tuesday
+meetinglink2 = "https://meet.google.com/hdi-yygo-sye" # Monday Tuesday
+meetinglink3 = "https://meet.google.com/amd-opoq-bwb" # Monday Tuesday
+meetinglink4 = "https://meet.google.com/hdi-yygo-sye" # Monday Tuesday
+
+meetinglink5 = "https://meet.google.com/pai-bfzd-rdr" # Wednesday Thursday
+
+meetinglink6 = "https://meet.google.com/oow-njwy-oho" # Wednesday
+
+meetinglink7 = "https://meet.google.com/sbk-jswq-rpm" # Thursday
+
+meetinglink8 = "https://meet.google.com/amd-opoq-bwb" # Friday
+
+def first_mon_sub():
+    if datetime.today().weekday() == 0: # Monday
+        if hour_now == "08": # 8am
+            driver.get(meetinglink1) # 8am to 10am
+            turnOffMicCam()
+            AskToJoin()
+            joinNow()
+            closing()
+        if hour_now == "10": # 10am - 12:00pm
+            driver.get(meetinglink2)
+            turnOffMicCam()
+            AskToJoin()
+            joinNow()
+            closing()
+        if hour_now == "13": # 1:30pm - 2:30pm
+            driver.get(meetinglink3) 
+            turnOffMicCam()
+            AskToJoin()
+            joinNow()
+            closing()
+        if hour_now == "14": # 2:30pm - 4:30pm
+            driver.get(meetinglink4)
+            turnOffMicCam()
+            AskToJoin()
+            joinNow()
+            closing()
+
+def first_tue_sub():
+    if datetime.today().weekday() == 1: # Tuesday
+         if hour_now == "08": # 8am to 10am
+            driver.get(meetinglink1)
+            turnOffMicCam()
+            AskToJoin()
+            joinNow()
+            closing()
+         if hour_now == "10": # 10am - 12:00pm
+            driver.get(meetinglink2)
+            turnOffMicCam()
+            AskToJoin()
+            joinNow()
+            closing()
+         if hour_now == "13": # 1:30pm - 2:30pm
+            driver.get(meetinglink3)
+            turnOffMicCam()
+            AskToJoin()
+            joinNow()
+            closing()
+         if hour_now == "14": # 2:30pm - 4:30pm
+            driver.get(meetinglink4)
+            turnOffMicCam()
+            AskToJoin()
+            joinNow()
+            closing()
+
+def first_wed_sub():
+    if datetime.today().weekday() == 2: # Wednesday
+         if hour_now == "08": # 8am - 9am
+            driver.get(meetinglink6)
+            turnOffMicCam()
+            AskToJoin()
+            joinNow()
+            closing()
+         if hour_now == "08": # 12:30pm
+            driver.get(meetinglink5)
+            turnOffMicCam()
+            AskToJoin()
+            joinNow()
+            closing()
+
+def first_thur_sub():
+    if datetime.today().weekday() == 3: # Thursday
+         if hour_now == "14": # 2:30pm to 4:30pm
+            driver.get(meetinglink7)
+            turnOffMicCam()
+            AskToJoin()
+            joinNow()
+            closing()
+
+def first_fri_sub():
+    if datetime.today().weekday() == 4: # Friday
+         if hour_now == "08": # 8am to 10pm
+            driver.get(meetinglink8)
+            turnOffMicCam()
+            AskToJoin()
+            joinNow()
+            closing()
+
+first_mon_sub()
+first_tue_sub()
+first_wed_sub()
+first_thur_sub()
+first_fri_sub()
