@@ -1,5 +1,6 @@
 echo off
 :loop
+cls
 echo Starting script...
 echo Started: %date% %time%
 python "C:\Users\Flores\Joey-Repositories\Python-Projects\completed\selenium\meetopener.py"
