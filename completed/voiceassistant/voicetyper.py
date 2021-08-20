@@ -66,7 +66,7 @@ assistant_speaks("Hello, " + name + '.')
 
 while(1):
 
-        assistant_speaks("What can i do for you?")
+        assistant_speaks("Say 'type' plus the words you want to type.")
         text = get_audio().lower()
 
         if text == 0:
