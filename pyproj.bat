@@ -3,6 +3,7 @@ echo off
 echo.
 echo Current Python APIs are:
 echo. 
+echo meet
 echo discordbot 
 echo wolfram
 echo TTS
@@ -10,7 +11,6 @@ echo voassist
 echo.
 echo Current Python scripts are:
 echo .
-echo meet
 echo netspeed
 echo clicker ( 's' start/stop 'e' exit )
 echo organize (input abspath, BE CAREFUL)
@@ -57,10 +57,10 @@ doskey keylogger=python "keylogger project directory"
 doskey birthday=python "birthday project directory"
 doskey meditate=python "meditate project directory"
 doskey wolfram=python "wolframalpha project directory"
-doskey meet=python "meetopener project directory"
 doskey TTS=python "TTS project directory"
 doskey voassist=python "voassist project directory"
 rem scripts not inside of this repository
+doskey meet=CALL "meetauto.bat"
 doskey discordbot=CALL "discorbot.bat"
 doskey redditbot=CALL "redditbot.bat"
 doskey twitterbot=CALL "twitterbot.bat"

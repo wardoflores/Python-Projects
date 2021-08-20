@@ -1,4 +1,5 @@
 echo off
+@REM TODO write log in txt file
 :loop
 cls
 echo Starting script...
