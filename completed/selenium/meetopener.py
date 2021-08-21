@@ -103,6 +103,7 @@ def closing():
 # If code is not constant,
 # Prompt asks for meeting link (practice link: https://meet.google.com/xby-zehb-ncf)
 
+# TODO: Add notification/notification sounds when a class is detected. 
 # TODO: Automate scraping for meeting room code,
 #  script a link scraper and append link here.
 # pyautogui.locateOnScreen('meetingcode.png', region=(0,0,0,0))
