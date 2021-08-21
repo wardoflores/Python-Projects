@@ -118,7 +118,7 @@ def closing():
 
 # Monday Tuesday
 
-meetinglink1 = "https://meet.google.com/ojc-ykmb-wph"
+meetinglink1 = "https://meet.google.com/byh-sezu-gnz"
 meetinglink2 = "https://meet.google.com/hdi-yygo-sye"
 meetinglink3 = "https://meet.google.com/amd-opoq-bwb"
 meetinglink4 = "https://meet.google.com/hdi-yygo-sye"
