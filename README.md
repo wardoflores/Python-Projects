@@ -1,18 +1,22 @@
 # Python-Projects
+
 Repository for Python Projects.
 
-# Usage
+## Usage
+
 Add the project module's directories to the pyproj.bat file. Also add a crdntl module for logging in Selenium scripts.
 
-# List of Projects
+## List of Projects
 
-## Completed
+### Completed
 
 * meditation - made by myself
 * speedprinter - made by myself
 * Keylogger - made with code from various Repositories.
 * Clicker - https://www.pythonpool.com/python-auto-clicker/
 * Idleclicker - https://www.reddit.com/r/ProgrammerHumor/comments/o6jjz5/when_the_company_i_work_for_removed_the_ability/
+* Idlescroller - https://pyautogui.readthedocs.io/en/latest/mouse.html?highlight=cursor%20move#mouse-movement
+* Idlecursor - https://pyautogui.readthedocs.io/en/latest/mouse.html?highlight=cursor%20move#mouse-movement
 * Calculator - https://www.programiz.com/python-programming/examples/calculator
 * File Organizer - gagangulyani: https://github.com/gagangulyani/File-Organizer
 * Spam Bot - https://www.youtube.com/watch?v=jBxRGcDmfWA / https://www.youtube.com/watch?v=-zd1UI2JTuk
@@ -32,7 +36,7 @@ Add the project module's directories to the pyproj.bat file. Also add a crdntl m
     - https://towardsdatascience.com/predicting-stock-prices-with-python-ec1d0c9bece1
 
 
-## In-progress
+### In-progress
 
 * minutes Visualizer - made by myself
 * Task scheduler - made by myself

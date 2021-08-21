@@ -13,6 +13,9 @@ echo Current Python scripts are:
 echo .
 echo netspeed
 echo clicker ( 's' start/stop 'e' exit )
+echo idleclicks
+echo idlescroller
+echo idlecursor
 echo organize (input abspath, BE CAREFUL)
 echo textspam
 echo filespam
@@ -53,6 +56,8 @@ doskey filespam=python "navyspam project directory"
 doskey spam=python "spam project directory"
 doskey clicker=python "clicker project directory"
 doskey idleclicks=python "idleclicks project directory"
+doskey idlecursor=python "idleclicks project directory"
+doskey idlescroller=python "idleclicks project directory"
 doskey keylogger=python "keylogger project directory"
 doskey birthday=python "birthday project directory"
 doskey meditate=python "meditate project directory"
