@@ -59,7 +59,7 @@ def turnOffMicCam():
     # turn off Microphone
     time.sleep(2)
     pyautogui.keyDown('ctrl') # hold ctrl key
-    pyautogui.press('d') # press s key
+    pyautogui.press('d') # press d key
     pyautogui.keyUp('ctrl') # release ctrl key
     # driver.find_element_by_xpath( 
     #     '//*[@id="yDmH0d"]/c-wiz/div/div/div[9]/div[3]/div/div/div[4]/div/div/div[1]/div[1]/div/div[4]/div[2]/div/div').click()
@@ -68,7 +68,7 @@ def turnOffMicCam():
     # turn off camera
     time.sleep(1)
     pyautogui.keyDown('ctrl') # hold ctrl key
-    pyautogui.press('e') # press s key
+    pyautogui.press('e') # press e key
     pyautogui.keyUp('ctrl') # release ctrl key
     # driver.find_element_by_xpath(
     #     '//*[@id="yDmH0d"]/c-wiz/div/div/div[9]/div[3]/div/div/div[4]/div/div/div[1]/div[1]/div/div[4]/div[1]/div/div/div').click()
@@ -115,18 +115,28 @@ def closing():
 
 # meetinglink = pyautogui.prompt(title="Google meet automation", text="Input meeting link:")
 
-meetinglink1 = "https://meet.google.com/ojc-ykmb-wph" # Monday Tuesday
-meetinglink2 = "https://meet.google.com/hdi-yygo-sye" # Monday Tuesday
-meetinglink3 = "https://meet.google.com/amd-opoq-bwb" # Monday Tuesday
-meetinglink4 = "https://meet.google.com/hdi-yygo-sye" # Monday Tuesday
+# Monday Tuesday
 
-meetinglink5 = "https://meet.google.com/pai-bfzd-rdr" # Wednesday Thursday
+meetinglink1 = "https://meet.google.com/ojc-ykmb-wph"
+meetinglink2 = "https://meet.google.com/hdi-yygo-sye"
+meetinglink3 = "https://meet.google.com/amd-opoq-bwb"
+meetinglink4 = "https://meet.google.com/hdi-yygo-sye"
 
-meetinglink6 = "https://meet.google.com/oow-njwy-oho" # Wednesday
+# Wednesday Thursday
 
-meetinglink7 = "https://meet.google.com/sbk-jswq-rpm" # Thursday
+meetinglink5 = "https://meet.google.com/pai-bfzd-rdr"
 
-meetinglink8 = "https://meet.google.com/amd-opoq-bwb" # Friday
+# Wednesday
+
+meetinglink6 = "https://meet.google.com/oow-njwy-oho"
+
+# Thursday
+
+meetinglink7 = "https://meet.google.com/sbk-jswq-rpm"
+
+# Friday 
+
+meetinglink8 = "https://meet.google.com/amd-opoq-bwb"
 
 def first_mon_sub():
     if datetime.today().weekday() == 0: # Monday
