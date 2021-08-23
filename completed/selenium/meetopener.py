@@ -1,5 +1,6 @@
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
+from os import system
 import time
 import datetime
 from datetime import datetime
@@ -258,3 +259,4 @@ first_tue_sub()
 first_wed_sub()
 first_thur_sub()
 first_fri_sub()
+
