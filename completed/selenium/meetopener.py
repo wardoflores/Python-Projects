@@ -64,46 +64,42 @@ def Glogin(mail, pswrd):
         'https://accounts.google.com/ServiceLogin?hl=en&passive=true&continue=https://www.google.com/&ec=GAZAAQ')
   
     # input Gmail
+    driver.implicitly_wait(10)
     driver.find_element_by_id("identifierId").send_keys(mail_address)
     driver.find_element_by_id("identifierNext").click()
-    driver.implicitly_wait(10)
   
     # input Password
     driver.find_element_by_xpath(
         '//*[@id="password"]/div[1]/div/div[1]/input').send_keys(passgoog)
     driver.implicitly_wait(10)
     driver.find_element_by_id("passwordNext").click()
-    driver.implicitly_wait(10)
   
-    # go to google home page
+    # go to google home page to keep login Wheen redirected to Meet.
     driver.get('https://google.com/')
-    driver.implicitly_wait(100)
+    pyautogui.press("F11")
 
 # explicit function to turn off mic and cam
 def turnOffMicCam():
   
     # turn off Microphone
-    time.sleep(2)
+    driver.implicitly_wait(10)
     pyautogui.keyDown('ctrl') # hold ctrl key
     pyautogui.press('d') # press d key
     pyautogui.keyUp('ctrl') # release ctrl key
     # driver.find_element_by_xpath( 
     #     '//*[@id="yDmH0d"]/c-wiz/div/div/div[9]/div[3]/div/div/div[4]/div/div/div[1]/div[1]/div/div[4]/div[2]/div/div').click()
-    driver.implicitly_wait(3000)
   
     # turn off camera
-    time.sleep(1)
+    driver.implicitly_wait(10)
     pyautogui.keyDown('ctrl') # hold ctrl key
     pyautogui.press('e') # press e key
     pyautogui.keyUp('ctrl') # release ctrl key
     # driver.find_element_by_xpath(
     #     '//*[@id="yDmH0d"]/c-wiz/div/div/div[9]/div[3]/div/div/div[4]/div/div/div[1]/div[1]/div/div[4]/div[1]/div/div/div').click()
-    driver.implicitly_wait(3000)
 
 def AskToJoin():
     # Ask to Join meet
-    time.sleep(5)
-    driver.implicitly_wait(2000)
+    driver.implicitly_wait(10)
     driver.find_element_by_css_selector(
         'div.uArJ5e.UQuaGc.Y5sE8d.uyXBBb.xKiqt').click()
     # Ask to join and join now buttons have same xpaths
@@ -111,18 +107,19 @@ def AskToJoin():
 def joinNow():
     # Join meet
     print("...Joined Session!")
-    time.sleep(5)
-    driver.implicitly_wait(2000)
+    driver.implicitly_wait(19)
     driver.find_element_by_css_selector(
         'div.uArJ5e.UQuaGc.Y5sE8d.uyXBBb.xKiqt').click()
 
 def closing():
-    close = driver.close()
 
-    closeprompt = pyautogui.confirm(text="Bye! Have a nice day!", title="End script?", buttons=['OK', 'Cancel'])
+    closeprompt = pyautogui.confirm(text="Click Ok to end session.", title="End session?", buttons=['OK', 'Cancel'])
+
 
     if closeprompt == "OK":
+        close = driver.close()
         close
+        pyautogui.alert(text="Bye! Have a nice day!", title="Session ended.")
     else:
         pass
 
@@ -158,14 +155,14 @@ def first_mon_sub():
             AskToJoin()
             # joinNow()
             closing()
-        if hour_now == "13" or hour_now == "14": # 1:30pm - 2:30pm
+        if hour_now == "13" or hour_now == "14" and min_now <= "29": # 1:30pm - 2:30pm
             Glogin(mail_address, passgoog)
             driver.get(meetinglink3) 
             turnOffMicCam()
             AskToJoin()
             # joinNow()
             closing()
-        if hour_now == "14" or hour_now == "15" or hour_now == "16": # 2:30pm - 4:30pm
+        if hour_now == "14" and min_now >= "30" or hour_now == "15" or hour_now == "16" and min_now <= "30": # 2:30pm - 4:30pm
             Glogin(mail_address, passgoog)
             driver.get(meetinglink4)
             turnOffMicCam()
@@ -174,7 +171,7 @@ def first_mon_sub():
             closing()
         else:
             driver.close()
-            return "No subjects for now"
+            return pyautogui.alert(text="Bye! Have a nice day!", title="No sessions for now.")
 
 def first_tue_sub():
     if datetime.today().weekday() == 1: # Tuesday
@@ -192,14 +189,14 @@ def first_tue_sub():
             AskToJoin()
             # joinNow()
             closing()
-        if hour_now == "13" or hour_now == "14": # 1:30pm - 2:30pm
+        if hour_now == "13" or hour_now == "14" and min_now <= "29": # 1:30pm - 2:30pm
             Glogin(mail_address, passgoog)
             driver.get(meetinglink3)
             turnOffMicCam()
             AskToJoin()
             # joinNow()
             closing()
-        if hour_now == "14" or hour_now == "15": # 2:30pm - 4:30pm
+        if hour_now == "14" and min_now >= "30" or hour_now == "15" or hour_now == "16" and min_now <= "30": # 2:30pm - 4:30pm
             Glogin(mail_address, passgoog)
             driver.get(meetinglink4)
             turnOffMicCam()
@@ -208,7 +205,7 @@ def first_tue_sub():
             closing()
         else:
             driver.close()
-            return "No subjects for now"
+            return pyautogui.alert(text="Bye! Have a nice day!", title="No sessions for now.")
 
 def first_wed_sub():
     if datetime.today().weekday() == 2: # Wednesday
@@ -228,7 +225,7 @@ def first_wed_sub():
             closing()
         else:
             driver.close()
-            return "No subjects for now"
+            return pyautogui.alert(text="Bye! Have a nice day!", title="No sessions for now.")
 
 def first_thur_sub():
     if datetime.today().weekday() == 3: # Thursday
@@ -241,7 +238,7 @@ def first_thur_sub():
             closing()
         else:
             driver.close()
-            return "No subjects for now"
+            return pyautogui.alert(text="Bye! Have a nice day!", title="No sessions for now.")
 
 def first_fri_sub():
     if datetime.today().weekday() == 4: # Friday
@@ -254,7 +251,7 @@ def first_fri_sub():
             closing()
         else:
             driver.close()
-            return "No subjects for now"
+            return pyautogui.alert(text="Bye! Have a nice day!", title="No sessions for now.")
 
 first_mon_sub()
 first_tue_sub()
