@@ -119,7 +119,7 @@ def joinNow():
 def closing():
     close = driver.close()
 
-    closeprompt = pyautogui.confirm(buttons="OK, cancel")
+    closeprompt = pyautogui.confirm(text="Bye! Have a nice day!", title="End script?", buttons=['OK', 'Cancel'])
 
     if closeprompt == "OK":
         close
