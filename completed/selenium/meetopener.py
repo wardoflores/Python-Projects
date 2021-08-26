@@ -7,6 +7,17 @@ from datetime import datetime
 import pyautogui
 from crdntl import mail_address, passgoog
 
+# TODO: Add notification/notification sounds when a class is detected.
+
+# TODO: Automate scraping for meeting room code,
+#  script a link scraper and append link here.
+# driver.get("https://mesenger.com")
+# pyautogui.locateOnScreen('profilewithlink.png', region=(0,0,0,0))
+# pyautogui.locateOnScreen('meetingcode.png', region=(0,0,0,0))
+# pyautogui.doubleClick()
+# pyautogui.hotkey()
+# pyautogui.typewrite() paste into input prompt
+
 # Change the Meeting links every week, check for new links.
 
 # Monday Tuesday
@@ -32,6 +43,8 @@ meetinglink7 = "https://meet.google.com/sbk-jswq-rpm"
 
 meetinglink8 = "https://meet.google.com/amd-opoq-bwb"
 
+# Selenium Driver variables
+
 brave_path = r"C:\Program Files\BraveSoftware\Brave-Browser\Application\brave.exe"
 driver_path = r"C:\webdriver\chromedriver.exe"
 
@@ -52,11 +65,15 @@ opt.add_experimental_option("prefs", {
 
 driver = webdriver.Chrome(executable_path=driver_path, options=opt)
 
+# Datetime Variables
+
 hour_now_format = datetime.now().isoformat(timespec='hours')   
 hour_now = str(hour_now_format[11:13])
 
 min_now_format = datetime.now().isoformat(timespec='minutes')   
 min_now = str(min_now_format[14:16])
+
+# Google Meet Functions
 
 def Glogin(mail, pswrd):
     # Login Page
@@ -69,9 +86,9 @@ def Glogin(mail, pswrd):
     driver.find_element_by_id("identifierNext").click()
   
     # input Password
+    driver.implicitly_wait(10)
     driver.find_element_by_xpath(
         '//*[@id="password"]/div[1]/div/div[1]/input').send_keys(passgoog)
-    driver.implicitly_wait(10)
     driver.find_element_by_id("passwordNext").click()
   
     # go to google home page to keep login Wheen redirected to Meet.
@@ -90,7 +107,6 @@ def turnOffMicCam():
     #     '//*[@id="yDmH0d"]/c-wiz/div/div/div[9]/div[3]/div/div/div[4]/div/div/div[1]/div[1]/div/div[4]/div[2]/div/div').click()
   
     # turn off camera
-    driver.implicitly_wait(10)
     pyautogui.keyDown('ctrl') # hold ctrl key
     pyautogui.press('e') # press e key
     pyautogui.keyUp('ctrl') # release ctrl key
@@ -99,15 +115,14 @@ def turnOffMicCam():
 
 def AskToJoin():
     # Ask to Join meet
-    driver.implicitly_wait(10)
+    driver.implicitly_wait(5)
     driver.find_element_by_css_selector(
         'div.uArJ5e.UQuaGc.Y5sE8d.uyXBBb.xKiqt').click()
     # Ask to join and join now buttons have same xpaths
 
 def joinNow():
     # Join meet
-    print("...Joined Session!")
-    driver.implicitly_wait(19)
+    driver.implicitly_wait(5)
     driver.find_element_by_css_selector(
         'div.uArJ5e.UQuaGc.Y5sE8d.uyXBBb.xKiqt').click()
 
@@ -115,29 +130,25 @@ def closing():
 
     closeprompt = pyautogui.confirm(text="Click Ok to end session.", title="End session?", buttons=['OK', 'Cancel'])
 
-
     if closeprompt == "OK":
         close = driver.close()
         close
         pyautogui.alert(text="Bye! Have a nice day!", title="Session ended.")
+    elif closeprompt == "Cancel":
+        return closeprompt
     else:
         pass
 
 # If code is not constant,
 # Prompt asks for meeting link (practice link: https://meet.google.com/xby-zehb-ncf)
 
-# TODO: Add notification/notification sounds when a class is detected. 
-# TODO: Automate scraping for meeting room code,
-#  script a link scraper and append link here.
-# pyautogui.locateOnScreen('meetingcode.png', region=(0,0,0,0))
-# pyautogui.doubleClick()
-# pyautogui.hotkey()
-# pyautogui.typewrite() paste into input prompt
-
 # If code is constant,
 # Comment 1st meetinglink variable, and uncomment 2nd meetinglink variable.
 
 # meetinglink = pyautogui.prompt(title="Google meet automation", text="Input meeting link:")
+
+
+# Datetime Scheduling of Code and dynamic Meeting link variable Execution
 
 def first_mon_sub():
     if datetime.today().weekday() == 0: # Monday
