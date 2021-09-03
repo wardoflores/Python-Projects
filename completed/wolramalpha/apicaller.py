@@ -23,6 +23,7 @@ while True:
         answer = next(res.results).text
     
         print(answer)
+        print("\n")
     
     except StopIteration:
 
