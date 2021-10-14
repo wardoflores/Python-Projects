@@ -34,6 +34,9 @@ Add the project module's directories to the pyproj.bat file. Also add a crdntl m
     - https://www.geeksforgeeks.org/personal-voice-assistant-in-python/
 * Stock Predicter
     - https://towardsdatascience.com/predicting-stock-prices-with-python-ec1d0c9bece1
+* think morse
+    - https://github.com/RichusX/thinkmorse
+    - https://gist.github.com/c5e3/e0264a546b249b635349f2ee6c302f36
 
 
 ### In-progress
