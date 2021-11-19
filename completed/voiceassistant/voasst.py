@@ -1,4 +1,4 @@
-#! python3
+#!/bin/zsh
 # Description: Voice Assistant that could search the web and query Wolfram Alpha.
 
 # importing speech recognition package from google api

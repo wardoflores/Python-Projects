@@ -1,4 +1,4 @@
-#! python3
+#!/bin/zsh
 # Simple Calculator with Arithmetic features.
 # Source: https://www.programiz.com/python-programming/examples/calculator
 # Eduardo Jose Flores III: https://github.com/Coalemus

@@ -1,4 +1,4 @@
-#! python3
+#!/bin/zsh
 # Description: Prints Download speed and Upload speed.
 
 

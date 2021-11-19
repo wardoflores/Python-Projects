@@ -1,15 +1,15 @@
-#! python3
+#!/bin/zsh
 # source: youtube.com/watch?v=jBxRGcDmfWA
 
 # pain.txt
-# C:\Users\Flores\Joey-Repositories\Python-Projects\completed\spambot\pain.txt
+# /home/joey/Joey-Repositories/Python-Projects/completed/spambot/pain.txt
 
 # navyspam.txt
-# C:\Users\Flores\Joey-Repositories\Python-Projects\completed\spambot\navyspamtext.txt
+# /home/joey/Joey-Repositories/Python-Projects/completed/spambot/navyspamtext.txt
 
 import pyautogui, time
 time.sleep(5)
-f = open(r"C:\Users\Flores\Joey-Repositories\Python-Projects\completed\spambot\navyspamtext.txt", "r")
+f = open("/home/joey/Joey-Repositories/Python-Projects/completed/spambot/pain.txt", "r")
 for word in f:
     pyautogui.typewrite(word)
     pyautogui.press("enter")

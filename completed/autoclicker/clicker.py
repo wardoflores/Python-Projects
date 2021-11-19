@@ -1,4 +1,4 @@
-#! python3
+#!/bin/zsh
 # Description: Auto Clicker. Press '=' For start and stop and '-' for exit.
 # Edit 'delay' variable for Click rate.
 
@@ -7,7 +7,7 @@ import time
 import threading
 from pynput.mouse import Button, Controller
 from pynput.keyboard import Listener, KeyCode
- 
+
  
 delay = 0.001 # Edit for rate of clicks
 button = Button.left

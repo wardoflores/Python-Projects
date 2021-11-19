@@ -1,4 +1,4 @@
-#! python3
+#!/bin/zsh
 # source: youtube.com/watch?v=jBxRGcDmfWA
 # source: youtube.com/watch?v=-zd1UI2JTuk
 

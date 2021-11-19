@@ -1,4 +1,4 @@
-#! python3
+#!/bin/zsh
 # Description: Voice assistant that types out what you say.
 
 # importing speech recognition package from google api

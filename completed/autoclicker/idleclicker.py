@@ -1,4 +1,4 @@
-#! python3
+#!/bin/zsh
 # Description: Script for appearing active while idling.
 
 import time
