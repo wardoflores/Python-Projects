@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/bin/zsh
 
 from time import sleep
 

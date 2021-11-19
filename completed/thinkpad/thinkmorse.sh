@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/zsh
 
 modprobe -r ec_sys
 modprobe ec_sys write_support=1
