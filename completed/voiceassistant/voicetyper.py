@@ -8,8 +8,8 @@ from gtts import gTTS # google text to speech
 import os # to save/open files
 import pyautogui as gui # To type out speech
 import wolframalpha # to calculate strings into formula
-from selenium import webdriver # to control browser operations
-from selenium.webdriver.chrome.options import Options
+# from selenium import webdriver # to control browser operations
+# from selenium.webdriver.chrome.options import Options
 
 def assistant_speaks(output):
     num = 1

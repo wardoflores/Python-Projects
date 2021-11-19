@@ -45,8 +45,8 @@ meetinglink8 = "https://meet.google.com/amd-opoq-bwb"
 
 # Selenium Driver variables
 
-brave_path = r"C:\Program Files\BraveSoftware\Brave-Browser\Application\brave.exe"
-driver_path = r"C:\webdriver\chromedriver.exe"
+bdriver_path = "/home/joey/Drivers/chromedriver"
+brave_path = "/home/joey/.cache/yay/brave-bin/brave-browser.desktop"
 
 opt = Options()
 opt.binary_location = brave_path

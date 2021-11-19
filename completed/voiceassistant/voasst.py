@@ -7,8 +7,8 @@ import playsound # to play saved mp3 file
 from gtts import gTTS # google text to speech
 import os # to save/open files
 import wolframalpha # to calculate strings into formula
-from selenium import webdriver # to control browser operations
-from selenium.webdriver.chrome.options import Options
+# from selenium import webdriver # to control browser operations
+# from selenium.webdriver.chrome.options import Options
 from threading import Thread
 
 num = 1
@@ -219,7 +219,7 @@ def active_process():
             # calling process text to process the query
             process_text(text)
 
-t.daemon=True
+# t.daemon=True
 Thread(target=active_process).start()
 
 

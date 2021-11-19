@@ -3,8 +3,8 @@ import pyautogui
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 
-driver_path = r"C:\webdriver\chromedriver.exe"
-brave_path = r"C:\Program Files\BraveSoftware\Brave-Browser\Application\brave.exe"
+driver_path = "/home/joey/Drivers/chromedriver"
+brave_path = "/home/joey/.cache/yay/brave-bin/brave-browser.desktop"
 
 opt = Options()
 opt.binary_location = brave_path

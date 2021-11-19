@@ -13,5 +13,3 @@ f = open("/home/joey/Joey-Repositories/Python-Projects/completed/spambot/pain.tx
 for word in f:
     pyautogui.typewrite(word)
     pyautogui.press("enter")
-
-
