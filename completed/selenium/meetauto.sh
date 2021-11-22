@@ -1,18 +1,23 @@
-:loop
-cls
-echo Started: %date% %time%
-echo Exiting script if today is a weekend...
-echo.
-for /f %%i in ('powershell ^(get-date^).DayOfWeek') do set dow=%%i
-if %dow% == Saturday goto exit 
-if %dow% == Sunday goto exit
-echo Starting script...
-python "C:\Users\Flores\Joey-Repositories\Python-Projects\completed\selenium\meetopener.py"
-echo.
-echo Ending script...
-echo Completed: %date% %time%
-echo waiting for 40 minutes...
-timeout /t 2400 /nobreak > nul
-goto loop
-:exit
-exit
+#!/bin/zsh
+dt=`date '+%d/%m/%Y_%H:%M:%S'`
+DOW=$(date '+%u')
+while :
+do
+clear
+echo "Started at $dt"
+echo "Exiting script if today is a weekend..."
+if [[ $DOW = 0 ]] 
+    then exit
+fi
+if [[ $DOW = 1 ]]
+    then exit
+fi
+echo "."
+dt=`date '+%d/%m/%Y_%H:%M:%S'`
+echo "Starting script..."
+/bin/python "/home/joey/Joey-Repositories/Python-Projects/completed/selenium/meetopener.py"
+echo "Ending script..."
+echo "Completed at $dt"
+echo "waiting for 40 minutes..."
+sleep 40m
+done
