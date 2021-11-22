@@ -1,6 +1,17 @@
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
+from selenium.webdriver.chrome.service import Service as ChromeService
+from selenium.webdriver.common.keys import Keys
+from webdriver_manager.chrome import ChromeDriverManager
+from selenium.webdriver.common.by import By
+
 from os import system
+from sys import platform # For Linux
+if platform != 'win32':
+    from pyvirtualdisplay import Display
+    display = Display(visible=0, size=(800, 600))
+    display.start()
+
 import time
 import datetime
 from datetime import datetime
@@ -45,14 +56,17 @@ meetinglink8 = "https://meet.google.com/amd-opoq-bwb"
 
 # Selenium Driver variables
 
-bdriver_path = "/home/joey/Drivers/chromedriver"
-brave_path = "/home/joey/.cache/yay/brave-bin/brave-browser.desktop"
+CHROMEDRIVER_PATH = "/home/joey/Drivers/chromedriver"
+brave_path = "/usr/share/applications/brave-browser.desktop"
 
 opt = Options()
+# opt = webdriver.ChromeOptions()
 opt.binary_location = brave_path
 # opt.add_argument("--incognito") OPTIONAL
 # opt.add_argument("--headless") OPTIONAL
 opt.add_argument('--start-maximized')
+opt.add_argument('--no-sandbox')
+opt.add_argument('--disable-dev-shm-usage')
 opt.add_experimental_option('excludeSwitches', ['enable-logging'])
 opt.add_argument('--disable-blink-features=AutomationControlled')
 opt.add_experimental_option("prefs", {
@@ -63,7 +77,15 @@ opt.add_experimental_option("prefs", {
     "profile.default_content_setting_values.notifications": 1
 })
 
-driver = webdriver.Chrome(executable_path=driver_path, options=opt)
+# s=Service(ChromeDriverManager().install())
+
+service = ChromeService(executable_path=CHROMEDRIVER_PATH)
+
+driver = webdriver.Chrome(service=service, options=opt)
+
+# driver = webdriver.Chrome(ChromeDriverManager().install(), options=opt)
+
+# driver = webdriver.Chrome(executable_path=bdriver_path, options=opt)
 
 # Datetime Variables
 
