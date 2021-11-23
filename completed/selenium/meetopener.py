@@ -10,7 +10,7 @@ from sys import platform # For Linux
 if platform != 'win32':
     from pyvirtualdisplay import Display
     display = Display(visible=0, size=(800, 600))
-    display.start()
+    # display.start()
 
 import time
 import datetime
@@ -171,6 +171,8 @@ def closing():
 
 
 # Datetime Scheduling of Code and dynamic Meeting link variable Execution
+
+display.start()
 
 def first_mon_sub():
     if datetime.today().weekday() == 0: # Monday
