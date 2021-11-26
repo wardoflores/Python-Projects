@@ -1,7 +1,7 @@
 #!/bin/zsh
 # Description: Auto Clicker. Press '=' For start and stop and '-' for exit.
 # Edit 'delay' variable for Click rate.
-
+# Only works in Code editor window when using Sway WM.
 
 import time
 import threading
