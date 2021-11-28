@@ -1,3 +1,6 @@
+#!/bin/zsh
+# Adapted for Linux systems, still doesn't work for it though.
+
 import time
 import pyautogui
 from selenium import webdriver

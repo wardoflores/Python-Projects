@@ -1,3 +1,6 @@
+#!/bin/zsh
+# Adapted for Linux systems, still doesn't work for it though.
+
 import time
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options

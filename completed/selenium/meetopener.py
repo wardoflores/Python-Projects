@@ -1,3 +1,6 @@
+#!/bin/zsh
+# Adapted for Linux systems, still doesn't work for it though.
+
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.chrome.service import Service as ChromeService
@@ -293,4 +296,3 @@ first_tue_sub()
 first_wed_sub()
 first_thur_sub()
 first_fri_sub()
-
