@@ -12,7 +12,7 @@ root.title("Calculator GUI Choose Arithmetic:")
 root.columnconfigure(0, weight=1)
 root.rowconfigure(0, weight=1)
 
-mainframe = ttk.Frame(root, padding="3 3 12 12")
+mainframe = ttk.Frame(root, padding="100 20 100 20")
 mainframe.grid(column=0, row=0, sticky=(N, W, E, S))
 
 def addition():
