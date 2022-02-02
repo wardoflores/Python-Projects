@@ -6,53 +6,55 @@
 from tkinter import *
 from tkinter import ttk
 
-def initadd():
+def addition():
 
-    global rootadd
-    global subaddframe
+    def initadd():
 
-    rootadd = Tk()
-    rootadd.title("Addition")
-    rootadd.columnconfigure(0, weight=1)
-    rootadd.rowconfigure(0, weight=1)
+        global rootadd
+        global subaddframe
 
-    subaddframe = ttk.Frame(rootadd, padding="3 3 12 12")
-    subaddframe.grid(column=0, row=0, sticky=(N, W, E, S))
+        rootadd = Tk()
+        rootadd.title("Addition")
+        rootadd.columnconfigure(0, weight=1)
+        rootadd.rowconfigure(0, weight=1)
 
-    ttk.Label(subaddframe, text="This addtion equation").grid(column=1, row=1, sticky=W)
-    ttk.Label(subaddframe, text="is equivalent to").grid(column=1, row=3, sticky=E)
+        subaddframe = ttk.Frame(rootadd, padding="3 3 12 12")
+        subaddframe.grid(column=0, row=0, sticky=(N, W, E, S))
 
-initadd()
+        ttk.Label(subaddframe, text="This addtion equation").grid(column=1, row=1, sticky=W)
+        ttk.Label(subaddframe, text="is equivalent to").grid(column=1, row=3, sticky=E)
 
-def addcalculate(*args):
-    
-    addequation = StringVar()
-    addequation_entry = ttk.Entry(subaddframe, width=7, textvariable=addequation)
-    addequation_entry.grid(column=2, row=1, sticky=(W, E))
+    initadd()
 
-    addequation2 = StringVar()
-    addequation_entry2 = ttk.Entry(subaddframe, width=7, textvariable=addequation2)
-    addequation_entry2.grid(column=2, row=2, sticky=(W, E))
+    def addcalculate(*args):
+        
+        addequation = StringVar()
+        addequation_entry = ttk.Entry(subaddframe, width=7, textvariable=addequation)
+        addequation_entry.grid(column=2, row=1, sticky=(W, E))
 
-    def addcalculated(*args):
-        try:
-            value = float(addequation.get()) # have prompt for what equation type to get and have prompts to add entries with choice of arithmetic.
-            value2 = float(addequation2.get())
-            addresult.set(int(value + value2)) # Convert to arithmetic specific to choice.
-        except ValueError:
-            pass
+        addequation2 = StringVar()
+        addequation_entry2 = ttk.Entry(subaddframe, width=7, textvariable=addequation2)
+        addequation_entry2.grid(column=2, row=2, sticky=(W, E))
 
-    addresult = StringVar()
+        def addcalculated(*args):
+            try:
+                value = float(addequation.get()) # have prompt for what equation type to get and have prompts to add entries with choice of arithmetic.
+                value2 = float(addequation2.get())
+                addresult.set(int(value + value2)) # Convert to arithmetic specific to choice.
+            except ValueError:
+                pass
 
-    ttk.Label(subaddframe, textvariable=addresult).grid(column=2, row=3, sticky=(W, E))
+        addresult = StringVar()
 
-    ttk.Button(subaddframe, text="Add", command=addcalculated).grid(column=3, row=3, sticky=W)
-    
-    for child in subaddframe.winfo_children(): 
-        child.grid_configure(padx=5, pady=5)
-        addequation_entry.focus()
-        rootadd.bind("<Return>", addcalculate) # executes 2nd arg if Return is pressed.
-    
-    rootadd.mainloop()
+        ttk.Label(subaddframe, textvariable=addresult).grid(column=2, row=3, sticky=(W, E))
 
-addcalculate()
+        ttk.Button(subaddframe, text="Add", command=addcalculated).grid(column=3, row=3, sticky=W)
+        
+        for child in subaddframe.winfo_children(): 
+            child.grid_configure(padx=5, pady=5)
+            addequation_entry.focus()
+            rootadd.bind("<Return>", addcalculate) # executes 2nd arg if Return is pressed.
+        
+        rootadd.mainloop()
+
+    addcalculate()
