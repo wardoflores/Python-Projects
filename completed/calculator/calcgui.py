@@ -58,7 +58,7 @@ def addition():
         for child in subaddframe.winfo_children(): 
             child.grid_configure(padx=5, pady=5)
             addequation_entry.focus()
-            root.bind("<Return>", addcalculate) # executes 2nd arg if Return is pressed.
+            root.bind("<Return>", addcalculated) # executes 2nd arg if Return is pressed.
 
     addcalculate()
 
@@ -105,7 +105,7 @@ def subtraction():
         for child in subsubframe.winfo_children(): 
             child.grid_configure(padx=5, pady=5)
             subequation_entry.focus()
-            root.bind("<Return>", subcalculate) # executes 2nd arg if Return is pressed.
+            root.bind("<Return>", subcalculated) # executes 2nd arg if Return is pressed.
 
     subcalculate()
 
@@ -152,7 +152,7 @@ def multiplication():
         for child in submultiframe.winfo_children(): 
             child.grid_configure(padx=5, pady=5)
             multiequation_entry.focus()
-            root.bind("<Return>", multicalculate) # executes 2nd arg if Return is pressed.
+            root.bind("<Return>", multicalculated) # executes 2nd arg if Return is pressed.
 
     multicalculate()
 
@@ -199,7 +199,7 @@ def division():
         for child in subdivframe.winfo_children(): 
             child.grid_configure(padx=5, pady=5)
             divequation_entry.focus()
-            root.bind("<Return>", divcalculate) # executes 2nd arg if Return is pressed.
+            root.bind("<Return>", divcalculated) # executes 2nd arg if Return is pressed.
 
     divcalculate()
 
