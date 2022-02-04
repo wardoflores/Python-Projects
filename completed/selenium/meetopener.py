@@ -5,14 +5,14 @@ from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.chrome.service import Service as ChromeService
 from selenium.webdriver.common.keys import Keys
-from webdriver_manager.chrome import ChromeDriverManager
+#from webdriver_manager.chrome import ChromeDriverManager
 from selenium.webdriver.common.by import By
 
 from os import system
-from sys import platform # For Linux
-if platform != 'win32':
-    from pyvirtualdisplay import Display
-    display = Display(visible=0, size=(800, 600))
+# from sys import platform # For Linux
+# if platform != 'win32':
+#     from pyvirtualdisplay import Display
+#     display = Display(visible=0, size=(800, 600))
     # display.start()
 
 import time
