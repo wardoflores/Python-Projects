@@ -3,30 +3,31 @@
 
 # --- test 1
 
-# import time
+import time
 
-# from selenium import webdriver
+from selenium import webdriver
 
+from selenium.webdriver.chrome.options import Options
 
-# ChromeOptions options = new ChromeOptions();
+options = Options()
 
-# options.setBinary("/path/to/other/chrome/binary");
+options.binary_location = "/usr/share/applications/google-chrome.google-chrome.desktop"
 
-# driver = webdriver.Chrome() # '/usr/bin/chromedriver' # Optional argument, if not specified will search path.
+driver = webdriver.Chrome() # '/usr/bin/chromedriver' # Optional argument, if not specified will search path.
 
-# driver.get('http://www.google.com/');
+driver.get('http://www.google.com/');
 
-# time.sleep(5) # Let the user actually see something!
+time.sleep(5) # Let the user actually see something!
 
-# search_box = driver.find_element_by_name('q')
+search_box = driver.find_element_by_name('q')
 
-# search_box.send_keys('ChromeDriver')
+search_box.send_keys('ChromeDriver')
 
-# search_box.submit()
+search_box.submit()
 
-# time.sleep(5) # Let the user actually see something!
+time.sleep(5) # Let the user actually see something!
 
-# driver.quit()
+driver.quit()
 
 # --- test 2
 
