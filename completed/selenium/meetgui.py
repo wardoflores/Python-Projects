@@ -33,31 +33,31 @@ label = ttk.Label(titleframe, text='Task Scheduler').grid()
 
 # Monday Tuesday
 
+meetinglink1 = StringVar()
+meetinglink1_entry = ttk.Entry(mainframe, width=7, textvariable=meetinglink1)
+meetinglink1_entry.grid(column=2, row=1, sticky=(W, E))
+
 meetinglink1 = "https://meet.google.com/byh-sezu-gnz"
 meetinglink2 = "https://meet.google.com/hdi-yygo-sye"
 meetinglink3 = "https://meet.google.com/amd-opoq-bwb"
 meetinglink4 = "https://meet.google.com/hdi-yygo-sye"
 
 # Wednesday Thursday
-
 meetinglink5 = "https://meet.google.com/pai-bfzd-rdr"
 
 # Wednesday
-
 meetinglink6 = "https://meet.google.com/oow-njwy-oho"
 
 # Thursday
-
 meetinglink7 = "https://meet.google.com/sbk-jswq-rpm"
 
 # Friday 
-
 meetinglink8 = "https://meet.google.com/amd-opoq-bwb"
 
 # Selenium Driver variables
 
-CHROMEDRIVER_PATH = "/home/joey/Drivers/chromedriver"
-brave_path = "/usr/share/applications/brave-browser.desktop"
+CHROMEDRIVER_PATH = "/usr/bin/chromedriver"
+brave_path = "/usr/share/applications/brave-browser-nightly.desktop"
 
 opt = Options()
 # opt = webdriver.ChromeOptions()
@@ -77,11 +77,15 @@ opt.add_experimental_option("prefs", {
     "profile.default_content_setting_values.notifications": 1
 })
 
+opt1 = Options()
+
+opt1.binary_location = brave_path
+
 # s=Service(ChromeDriverManager().install())
 
 service = ChromeService(executable_path=CHROMEDRIVER_PATH)
 
-driver = webdriver.Chrome(service=service, options=opt)
+driver = webdriver.Chrome(options=opt1) # service=service, options=opt
 
 # driver = webdriver.Chrome(ChromeDriverManager().install(), options=opt)
 
