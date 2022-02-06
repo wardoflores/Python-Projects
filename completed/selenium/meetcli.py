@@ -8,7 +8,7 @@ from selenium.webdriver.common.keys import Keys
 #from webdriver_manager.chrome import ChromeDriverManager
 from selenium.webdriver.common.by import By
 
-from os import system
+# from os import system
 # from sys import platform # For Linux
 # if platform != 'win32':
 #     from pyvirtualdisplay import Display
@@ -59,8 +59,8 @@ meetinglink8 = "https://meet.google.com/amd-opoq-bwb"
 
 # Selenium Driver variables
 
-CHROMEDRIVER_PATH = "/home/joey/Drivers/chromedriver"
-brave_path = "/usr/share/applications/brave-browser.desktop"
+CHROMEDRIVER_PATH = "/usr/bin/chromedriver"
+brave_path = "/usr/share/applications/google-chrome.desktop"
 
 opt = Options()
 # opt = webdriver.ChromeOptions()

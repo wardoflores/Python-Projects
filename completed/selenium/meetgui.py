@@ -57,7 +57,7 @@ meetinglink8 = "https://meet.google.com/amd-opoq-bwb"
 # Selenium Driver variables
 
 CHROMEDRIVER_PATH = "/usr/bin/chromedriver"
-brave_path = "/usr/share/applications/brave-browser-nightly.desktop"
+brave_path = "/usr/share/applications/google-chrome.desktop"
 
 opt = Options()
 # opt = webdriver.ChromeOptions()
