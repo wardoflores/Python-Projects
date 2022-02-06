@@ -8,13 +8,6 @@ from selenium.webdriver.common.keys import Keys
 #from webdriver_manager.chrome import ChromeDriverManager
 from selenium.webdriver.common.by import By
 
-# from os import system
-# from sys import platform # For Linux
-# if platform != 'win32':
-#     from pyvirtualdisplay import Display
-#     display = Display(visible=0, size=(800, 600))
-    # display.start()
-
 import time
 import datetime
 from datetime import datetime
@@ -63,32 +56,28 @@ CHROMEDRIVER_PATH = "/usr/bin/chromedriver"
 brave_path = "/usr/share/applications/google-chrome.desktop"
 
 opt = Options()
-# opt = webdriver.ChromeOptions()
 opt.binary_location = brave_path
+# opt = webdriver.ChromeOptions()
 # opt.add_argument("--incognito") OPTIONAL
 # opt.add_argument("--headless") OPTIONAL
-opt.add_argument('--start-maximized')
-opt.add_argument('--no-sandbox')
-opt.add_argument('--disable-dev-shm-usage')
-opt.add_experimental_option('excludeSwitches', ['enable-logging'])
-opt.add_argument('--disable-blink-features=AutomationControlled')
-opt.add_experimental_option("prefs", {
+# opt.add_argument('--start-maximized')
+# opt.add_argument('--no-sandbox')
+# opt.add_argument('--disable-dev-shm-usage')
+# opt.add_experimental_option('excludeSwitches', ['enable-logging'])
+# opt.add_argument('--disable-blink-features=AutomationControlled')
+# opt.add_experimental_option("prefs", {
   
-    "profile.default_content_setting_values.media_stream_mic": 1,
-    "profile.default_content_setting_values.media_stream_camera": 1,
-    "profile.default_content_setting_values.geolocation": 0,
-    "profile.default_content_setting_values.notifications": 1
-})
+#     "profile.default_content_setting_values.media_stream_mic": 1,
+#     "profile.default_content_setting_values.media_stream_camera": 1,
+#     "profile.default_content_setting_values.geolocation": 0,
+#     "profile.default_content_setting_values.notifications": 1
+# })
 
 # s=Service(ChromeDriverManager().install())
 
-service = ChromeService(executable_path=CHROMEDRIVER_PATH)
+# service = ChromeService(executable_path=CHROMEDRIVER_PATH)
 
-driver = webdriver.Chrome(service=service, options=opt)
-
-# driver = webdriver.Chrome(ChromeDriverManager().install(), options=opt)
-
-# driver = webdriver.Chrome(executable_path=bdriver_path, options=opt)
+driver = webdriver.Chrome() # service=service, 
 
 # Datetime Variables
 
@@ -174,8 +163,6 @@ def closing():
 
 
 # Datetime Scheduling of Code and dynamic Meeting link variable Execution
-
-display.start()
 
 def first_mon_sub():
     if datetime.today().weekday() == 0: # Monday

@@ -60,32 +60,28 @@ CHROMEDRIVER_PATH = "/usr/bin/chromedriver"
 brave_path = "/usr/share/applications/google-chrome.desktop"
 
 opt = Options()
-# opt = webdriver.ChromeOptions()
 opt.binary_location = brave_path
+# opt = webdriver.ChromeOptions()
 # opt.add_argument("--incognito") OPTIONAL
 # opt.add_argument("--headless") OPTIONAL
-opt.add_argument('--start-maximized')
-opt.add_argument('--no-sandbox')
-opt.add_argument('--disable-dev-shm-usage')
-opt.add_experimental_option('excludeSwitches', ['enable-logging'])
-opt.add_argument('--disable-blink-features=AutomationControlled')
-opt.add_experimental_option("prefs", {
+# opt.add_argument('--start-maximized')
+# opt.add_argument('--no-sandbox')
+# opt.add_argument('--disable-dev-shm-usage')
+# opt.add_experimental_option('excludeSwitches', ['enable-logging'])
+# opt.add_argument('--disable-blink-features=AutomationControlled')
+# opt.add_experimental_option("prefs", {
   
-    "profile.default_content_setting_values.media_stream_mic": 1,
-    "profile.default_content_setting_values.media_stream_camera": 1,
-    "profile.default_content_setting_values.geolocation": 0,
-    "profile.default_content_setting_values.notifications": 1
-})
-
-opt1 = Options()
-
-opt1.binary_location = brave_path
+#     "profile.default_content_setting_values.media_stream_mic": 1,
+#     "profile.default_content_setting_values.media_stream_camera": 1,
+#     "profile.default_content_setting_values.geolocation": 0,
+#     "profile.default_content_setting_values.notifications": 1
+# })
 
 # s=Service(ChromeDriverManager().install())
 
-service = ChromeService(executable_path=CHROMEDRIVER_PATH)
+# service = ChromeService(executable_path=CHROMEDRIVER_PATH)
 
-driver = webdriver.Chrome(options=opt1) # service=service, options=opt
+driver = webdriver.Chrome() # service=service, options=opt
 
 # driver = webdriver.Chrome(ChromeDriverManager().install(), options=opt)
 
