@@ -1,11 +1,9 @@
 #!/bin/zsh
-# Adapted for Linux systems, still doesn't work for it though.
+# Adapted for Linux systems, Google login has a lock on Automated Browsers it seems.
 
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
-from selenium.webdriver.chrome.service import Service as ChromeService
 from selenium.webdriver.common.keys import Keys
-#from webdriver_manager.chrome import ChromeDriverManager
 from selenium.webdriver.common.by import By
 
 import time
@@ -14,40 +12,24 @@ from datetime import datetime
 import pyautogui
 from crdntl import mail_address, passgoog
 
-# TODO: Add notification/notification sounds when a class is detected.
-
-# TODO: Automate scraping for meeting room code,
-#  script a link scraper and append link here.
-# driver.get("https://mesenger.com")
-# pyautogui.locateOnScreen('profilewithlink.png', region=(0,0,0,0))
-# pyautogui.locateOnScreen('meetingcode.png', region=(0,0,0,0))
-# pyautogui.doubleClick()
-# pyautogui.hotkey()
-# pyautogui.typewrite() paste into input prompt
-
-# Change the Meeting links every week, check for new links.
+# Change these Meeting links every week, check for new links.
 
 # Monday Tuesday
-
 meetinglink1 = "https://meet.google.com/byh-sezu-gnz"
 meetinglink2 = "https://meet.google.com/hdi-yygo-sye"
 meetinglink3 = "https://meet.google.com/amd-opoq-bwb"
 meetinglink4 = "https://meet.google.com/hdi-yygo-sye"
 
 # Wednesday Thursday
-
 meetinglink5 = "https://meet.google.com/pai-bfzd-rdr"
 
 # Wednesday
-
 meetinglink6 = "https://meet.google.com/oow-njwy-oho"
 
 # Thursday
-
 meetinglink7 = "https://meet.google.com/sbk-jswq-rpm"
 
 # Friday 
-
 meetinglink8 = "https://meet.google.com/amd-opoq-bwb"
 
 # Selenium Driver variables
@@ -56,8 +38,7 @@ CHROMEDRIVER_PATH = "/usr/bin/chromedriver"
 brave_path = "/usr/share/applications/google-chrome.desktop"
 
 opt = Options()
-opt.binary_location = brave_path
-# opt = webdriver.ChromeOptions()
+opt.binary_location = brave_path # ESSENTIAL
 # opt.add_argument("--incognito") OPTIONAL
 # opt.add_argument("--headless") OPTIONAL
 # opt.add_argument('--start-maximized')
@@ -73,14 +54,9 @@ opt.binary_location = brave_path
 #     "profile.default_content_setting_values.notifications": 1
 # })
 
-# s=Service(ChromeDriverManager().install())
-
-# service = ChromeService(executable_path=CHROMEDRIVER_PATH)
-
-driver = webdriver.Chrome() # service=service, 
+# driver = webdriver.Chrome() # service=service, options=opt | Uncomment to start regardless of conditions.
 
 # Datetime Variables
-
 hour_now_format = datetime.now().isoformat(timespec='hours')   
 hour_now = str(hour_now_format[11:13])
 
@@ -88,7 +64,6 @@ min_now_format = datetime.now().isoformat(timespec='minutes')
 min_now = str(min_now_format[14:16])
 
 # Google Meet Functions
-
 def Glogin(mail, pswrd):
     # Login Page
     driver.get(
@@ -153,133 +128,93 @@ def closing():
     else:
         pass
 
-# If code is not constant,
-# Prompt asks for meeting link (practice link: https://meet.google.com/xby-zehb-ncf)
-
-# If code is constant,
-# Comment 1st meetinglink variable, and uncomment 2nd meetinglink variable.
-
-# meetinglink = pyautogui.prompt(title="Google meet automation", text="Input meeting link:")
-
-
 # Datetime Scheduling of Code and dynamic Meeting link variable Execution
+def mon_sub():
+    driver = webdriver.Chrome() # service=service, 
+    Glogin(mail_address, passgoog)
+    driver.get(meetinglink1)
+    turnOffMicCam()
+    AskToJoin()
+    # joinNow()
+    closing()
 
-def first_mon_sub():
+def tue_sub():
+    driver = webdriver.Chrome() # service=service, 
+    Glogin(mail_address, passgoog)
+    driver.get(meetinglink1)
+    turnOffMicCam()
+    AskToJoin()
+    # joinNow()
+    closing()
+
+def wed_sub():
+    driver = webdriver.Chrome() # service=service, 
+    Glogin(mail_address, passgoog)
+    driver.get(meetinglink6)
+    turnOffMicCam()
+    AskToJoin()
+    # joinNow()
+    closing()
+
+def thur_sub():
+    driver = webdriver.Chrome() # service=service,
+    Glogin(mail_address, passgoog)
+    driver.get(meetinglink7)
+    turnOffMicCam()
+    AskToJoin()
+    # joinNow()
+    closing()
+
+def fri_sub():
+    driver = webdriver.Chrome() # service=service,
+    Glogin(mail_address, passgoog)
+    driver.get(meetinglink8)
+    turnOffMicCam()
+    AskToJoin()
+    # joinNow()
+    closing()
+
+def time_scan():
+    
+    # Time checking function
+    # if datetime.today().weekday() == 6: # Change to current Time, 6 is sunday, 0 is monday, figure out the rest.
+    #     print("Guess for current wekday passed the Test.")
+    #     if hour_now == "10": # Change to current Time, from the "input" to 1 hour after in millitary time.
+    #         print("Guess for current hour of the weekday passed the Test.")
+
     if datetime.today().weekday() == 0: # Monday
         if hour_now == "08" or hour_now == "09": # 8am to 10am
-            Glogin(mail_address, passgoog)
-            driver.get(meetinglink1)
-            turnOffMicCam()
-            AskToJoin()
-            # joinNow()
-            closing()
+            mon_sub()
         if hour_now == "10" or hour_now == "11": # 10am - 12:00pm
-            Glogin(mail_address, passgoog)
-            driver.get(meetinglink2)
-            turnOffMicCam()
-            AskToJoin()
-            # joinNow()
-            closing()
+            mon_sub()
         if hour_now == "13" or hour_now == "14" and min_now <= "29": # 1:30pm - 2:30pm
-            Glogin(mail_address, passgoog)
-            driver.get(meetinglink3) 
-            turnOffMicCam()
-            AskToJoin()
-            # joinNow()
-            closing()
+            mon_sub()
         if hour_now == "14" and min_now >= "30" or hour_now == "15" or hour_now == "16" and min_now <= "30": # 2:30pm - 4:30pm
-            Glogin(mail_address, passgoog)
-            driver.get(meetinglink4)
-            turnOffMicCam()
-            AskToJoin()
-            # joinNow()
-            closing()
-        else:
-            driver.close()
-            return pyautogui.alert(text="Bye! Have a nice day!", title="No sessions for now.")
+            mon_sub()
 
-def first_tue_sub():
     if datetime.today().weekday() == 1: # Tuesday
         if hour_now == "08" or hour_now == "09": # 8am to 10am
-            Glogin(mail_address, passgoog)
-            driver.get(meetinglink1)
-            turnOffMicCam()
-            AskToJoin()
-            # joinNow()
-            closing()
+            tue_sub()
         if hour_now == "10" or hour_now == "11": # 10am - 12:00pm
-            Glogin(mail_address, passgoog)
-            driver.get(meetinglink2)
-            turnOffMicCam()
-            AskToJoin()
-            # joinNow()
-            closing()
+            tue_sub()
         if hour_now == "13" or hour_now == "14" and min_now <= "29": # 1:30pm - 2:30pm
-            Glogin(mail_address, passgoog)
-            driver.get(meetinglink3)
-            turnOffMicCam()
-            AskToJoin()
-            # joinNow()
-            closing()
+            tue_sub()
         if hour_now == "14" and min_now >= "30" or hour_now == "15" or hour_now == "16" and min_now <= "30": # 2:30pm - 4:30pm
-            Glogin(mail_address, passgoog)
-            driver.get(meetinglink4)
-            turnOffMicCam()
-            AskToJoin()
-            # joinNow()
-            closing()
-        else:
-            driver.close()
-            return pyautogui.alert(text="Bye! Have a nice day!", title="No sessions for now.")
+            tue_sub()
 
-def first_wed_sub():
     if datetime.today().weekday() == 2: # Wednesday
-        if hour_now == "08": # 8am - 9am
-            Glogin(mail_address, passgoog)
-            driver.get(meetinglink6)
-            turnOffMicCam()
-            AskToJoin()
-            # joinNow()
-            closing()
-        if hour_now == "12": # 12:30pm
-            Glogin(mail_address, passgoog)
-            driver.get(meetinglink5)
-            turnOffMicCam()
-            AskToJoin()
-            # joinNow()
-            closing()
-        else:
-            driver.close()
-            return pyautogui.alert(text="Bye! Have a nice day!", title="No sessions for now.")
+        if hour_now == "08" or hour_now == "12": # 12:30pm: # 8am - 9am
+            wed_sub()
 
-def first_thur_sub():
     if datetime.today().weekday() == 3: # Thursday
         if hour_now == "14" or hour_now == "15" or hour_now == "16": # 2:30pm to 4:30pm
-            Glogin(mail_address, passgoog)
-            driver.get(meetinglink7)
-            turnOffMicCam()
-            AskToJoin()
-            # joinNow()
-            closing()
-        else:
-            driver.close()
-            return pyautogui.alert(text="Bye! Have a nice day!", title="No sessions for now.")
+            thur_sub()
 
-def first_fri_sub():
     if datetime.today().weekday() == 4: # Friday
         if hour_now == "08" or hour_now == "09": # 8am to 10pm
-            Glogin(mail_address, passgoog)
-            driver.get(meetinglink8)
-            turnOffMicCam()
-            AskToJoin()
-            # joinNow()
-            closing()
-        else:
-            driver.close()
-            return pyautogui.alert(text="Bye! Have a nice day!", title="No sessions for now.")
+            fri_sub()
 
-first_mon_sub()
-first_tue_sub()
-first_wed_sub()
-first_thur_sub()
-first_fri_sub()
+# Test for Functionality, Comment out function for proper usage of Program.
+# any_sub()
+
+time_scan()
