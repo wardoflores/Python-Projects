@@ -1,11 +1,10 @@
 #!/bin/zsh
-# Adapted for Linux systems, still doesn't work for it though.
+# Adapted for Linux systems, Google login has a lock on Automated Browsers it seems.
 
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.chrome.service import Service as ChromeService
 from selenium.webdriver.common.keys import Keys
-#from webdriver_manager.chrome import ChromeDriverManager
 from selenium.webdriver.common.by import By
 
 import time
@@ -27,32 +26,109 @@ mainframe = ttk.Frame(root, padding="100 100 100 100")
 mainframe.grid(column=0, row=0, sticky=(N, W, E, S))
 
 titleframe = ttk.Frame(mainframe).grid(column=1, row=1, sticky=(N))
-label = ttk.Label(titleframe, text='Task Scheduler').grid()
+label = ttk.Label(titleframe, text='Task Scheduler: Paste the link to the current time.').grid(column=0, row=1, sticky=N)
 
-# Change the Meeting links every week, check for new links.
+ttk.Label(mainframe, text="Monday").grid(column=1, row=0, sticky=N)
+ttk.Label(mainframe, text="Tuesday").grid(column=2, row=0, sticky=N)
+ttk.Label(mainframe, text="Wednesday").grid(column=3, row=0, sticky=N)
+ttk.Label(mainframe, text="Thursday").grid(column=4, row=0, sticky=N)
+ttk.Label(mainframe, text="Friday").grid(column=5, row=0, sticky=N)
 
-# Monday Tuesday
+ttk.Label(mainframe, text="1st Sub").grid(column=0, row=1, sticky=W)
+ttk.Label(mainframe, text="2nd Sub").grid(column=0, row=2, sticky=W)
+ttk.Label(mainframe, text="3rd Sub").grid(column=0, row=3, sticky=W)
+ttk.Label(mainframe, text="4th Sub").grid(column=0, row=4, sticky=W)
 
-meetinglink1 = StringVar()
-meetinglink1_entry = ttk.Entry(mainframe, width=7, textvariable=meetinglink1)
-meetinglink1_entry.grid(column=2, row=1, sticky=(W, E))
 
-meetinglink1 = "https://meet.google.com/byh-sezu-gnz"
-meetinglink2 = "https://meet.google.com/hdi-yygo-sye"
-meetinglink3 = "https://meet.google.com/amd-opoq-bwb"
-meetinglink4 = "https://meet.google.com/hdi-yygo-sye"
+# Change these Meeting links every week, check for new links.
 
-# Wednesday Thursday
-meetinglink5 = "https://meet.google.com/pai-bfzd-rdr"
+# Monday Subjects
+mondaylink1 = StringVar()
+mondaylink1_entry = ttk.Entry(mainframe, width=7, textvariable=mondaylink1)
+mondaylink1_entry.grid(column=1, row=1, sticky=(W, E))
 
-# Wednesday
-meetinglink6 = "https://meet.google.com/oow-njwy-oho"
+mondaylink2 = StringVar()
+mondaylink2_entry = ttk.Entry(mainframe, width=7, textvariable=mondaylink2)
+mondaylink2_entry.grid(column=1, row=2, sticky=(W, E))
 
-# Thursday
-meetinglink7 = "https://meet.google.com/sbk-jswq-rpm"
+mondaylink3 = StringVar()
+mondaylink3_entry = ttk.Entry(mainframe, width=7, textvariable=mondaylink3)
+mondaylink3_entry.grid(column=1, row=3, sticky=(W, E))
 
-# Friday 
-meetinglink8 = "https://meet.google.com/amd-opoq-bwb"
+mondaylink4 = StringVar()
+mondaylink4_entry = ttk.Entry(mainframe, width=7, textvariable=mondaylink4)
+mondaylink4_entry.grid(column=1, row=4, sticky=(W, E))
+
+
+# Tuesday Subjects
+tuesdaylink1 = StringVar()
+tuesdaylink1_entry = ttk.Entry(mainframe, width=7, textvariable=tuesdaylink1)
+tuesdaylink1_entry.grid(column=2, row=1, sticky=(W, E))
+
+tuesdaylink2 = StringVar()
+tuesdaylink2_entry = ttk.Entry(mainframe, width=7, textvariable=tuesdaylink2)
+tuesdaylink2_entry.grid(column=2, row=2, sticky=(W, E))
+
+tuesdaylink3 = StringVar()
+tuesdaylink3_entry = ttk.Entry(mainframe, width=7, textvariable=tuesdaylink3)
+tuesdaylink3_entry.grid(column=2, row=3, sticky=(W, E))
+
+tuesdaylink4 = StringVar()
+tuesdaylink4_entry = ttk.Entry(mainframe, width=7, textvariable=tuesdaylink4)
+tuesdaylink4_entry.grid(column=2, row=4, sticky=(W, E))
+
+# Wednesday Subjects
+wednesdaylink1 = StringVar()
+wednesdaylink1_entry = ttk.Entry(mainframe, width=7, textvariable=wednesdaylink1)
+wednesdaylink1_entry.grid(column=3, row=1, sticky=(W, E))
+
+wednesdaylink2 = StringVar()
+wednesdaylink2_entry = ttk.Entry(mainframe, width=7, textvariable=wednesdaylink2)
+wednesdaylink2_entry.grid(column=3, row=2, sticky=(W, E))
+
+wednesdaylink3 = StringVar()
+wednesdaylink3_entry = ttk.Entry(mainframe, width=7, textvariable=wednesdaylink3)
+wednesdaylink3_entry.grid(column=3, row=3, sticky=(W, E))
+
+wednesdaylink4 = StringVar()
+wednesdaylink4_entry = ttk.Entry(mainframe, width=7, textvariable=wednesdaylink4)
+wednesdaylink4_entry.grid(column=3, row=4, sticky=(W, E))
+
+# Thursday Subjects
+thursdaylink1 = StringVar()
+thursdaylink1_entry = ttk.Entry(mainframe, width=7, textvariable=thursdaylink1)
+thursdaylink1_entry.grid(column=4, row=1, sticky=(W, E))
+
+thursdaylink2 = StringVar()
+thursdaylink2_entry = ttk.Entry(mainframe, width=7, textvariable=thursdaylink2)
+thursdaylink2_entry.grid(column=4, row=2, sticky=(W, E))
+
+thursdaylink3 = StringVar()
+thursdaylink3_entry = ttk.Entry(mainframe, width=7, textvariable=thursdaylink3)
+thursdaylink3_entry.grid(column=4, row=3, sticky=(W, E))
+
+thursdaylink4 = StringVar()
+thursdaylink4_entry = ttk.Entry(mainframe, width=7, textvariable=thursdaylink4)
+thursdaylink4_entry.grid(column=4, row=4, sticky=(W, E))
+
+# Friday Subjects
+fridaylink1 = StringVar()
+fridaylink1_entry = ttk.Entry(mainframe, width=7, textvariable=fridaylink1)
+fridaylink1_entry.grid(column=5, row=1, sticky=(W, E))
+
+fridaylink2 = StringVar()
+fridaylink2_entry = ttk.Entry(mainframe, width=7, textvariable=fridaylink2)
+fridaylink2_entry.grid(column=5, row=2, sticky=(W, E))
+
+fridaylink3 = StringVar()
+fridaylink3_entry = ttk.Entry(mainframe, width=7, textvariable=fridaylink3)
+fridaylink3_entry.grid(column=5, row=3, sticky=(W, E))
+
+fridaylink4 = StringVar()
+fridaylink4_entry = ttk.Entry(mainframe, width=7, textvariable=fridaylink4)
+fridaylink4_entry.grid(column=5, row=4, sticky=(W, E))
+
+root.mainloop()
 
 # Selenium Driver variables
 
@@ -77,18 +153,9 @@ opt.binary_location = brave_path
 #     "profile.default_content_setting_values.notifications": 1
 # })
 
-# s=Service(ChromeDriverManager().install())
-
-# service = ChromeService(executable_path=CHROMEDRIVER_PATH)
-
-driver = webdriver.Chrome() # service=service, options=opt
-
-# driver = webdriver.Chrome(ChromeDriverManager().install(), options=opt)
-
-# driver = webdriver.Chrome(executable_path=bdriver_path, options=opt)
+#driver = webdriver.Chrome() # service=service, options=opt | Uncomment to start regardless of conditions.
 
 # Datetime Variables
-
 hour_now_format = datetime.now().isoformat(timespec='hours')   
 hour_now = str(hour_now_format[11:13])
 
@@ -96,7 +163,6 @@ min_now_format = datetime.now().isoformat(timespec='minutes')
 min_now = str(min_now_format[14:16])
 
 # Google Meet Functions
-
 def Glogin(mail, pswrd):
     # Login Page
     driver.get(
@@ -161,122 +227,232 @@ def closing():
     else:
         pass
 
-def first_mon_sub():
+# meetinglink = pyautogui.prompt(title="Google meet automation", text="Input meeting link:")
+
+# Datetime Scheduling of Code and dynamic Meeting link variable Execution.
+#TODO: number out the subs and append the meetinglink entry form there.
+
+def mon_sub1():
+    driver = webdriver.Chrome() # service=service, 
+    Glogin(mail_address, passgoog)
+    driver.get(mondaylink1)
+    turnOffMicCam()
+    AskToJoin()
+    # joinNow()
+    closing()
+
+def mon_sub2():
+    driver = webdriver.Chrome() # service=service, 
+    Glogin(mail_address, passgoog)
+    driver.get(mondaylink2)
+    turnOffMicCam()
+    AskToJoin()
+    # joinNow()
+    closing()
+
+def mon_sub3():
+    driver = webdriver.Chrome() # service=service, 
+    Glogin(mail_address, passgoog)
+    driver.get(mondaylink3)
+    turnOffMicCam()
+    AskToJoin()
+    # joinNow()
+    closing()
+
+def mon_sub4():
+    driver = webdriver.Chrome() # service=service, 
+    Glogin(mail_address, passgoog)
+    driver.get(mondaylink4)
+    turnOffMicCam()
+    AskToJoin()
+    # joinNow()
+    closing()
+
+def tue_sub1():
+    driver = webdriver.Chrome() # service=service, 
+    Glogin(mail_address, passgoog)
+    driver.get(tuesdaylink1)
+    turnOffMicCam()
+    AskToJoin()
+    # joinNow()
+    closing()
+
+def tue_sub1():
+    driver = webdriver.Chrome() # service=service, 
+    Glogin(mail_address, passgoog)
+    driver.get(tuesdaylink2)
+    turnOffMicCam()
+    AskToJoin()
+    # joinNow()
+    closing()
+
+def tue_sub3():
+    driver = webdriver.Chrome() # service=service, 
+    Glogin(mail_address, passgoog)
+    driver.get(tuesdaylink3)
+    turnOffMicCam()
+    AskToJoin()
+    # joinNow()
+    closing()
+
+def tue_sub4():
+    driver = webdriver.Chrome() # service=service, 
+    Glogin(mail_address, passgoog)
+    driver.get(tuesdaylink4)
+    turnOffMicCam()
+    AskToJoin()
+    # joinNow()
+    closing()
+
+def wed_sub1():
+    driver = webdriver.Chrome() # service=service, 
+    Glogin(mail_address, passgoog)
+    driver.get(wednesdaylink1)
+    turnOffMicCam()
+    AskToJoin()
+    # joinNow()
+    closing()
+
+def wed_sub2():
+    driver = webdriver.Chrome() # service=service, 
+    Glogin(mail_address, passgoog)
+    driver.get(wednesdaylink2)
+    turnOffMicCam()
+    AskToJoin()
+    # joinNow()
+    closing()
+
+def wed_sub3():
+    driver = webdriver.Chrome() # service=service, 
+    Glogin(mail_address, passgoog)
+    driver.get(wednesdaylink3)
+    turnOffMicCam()
+    AskToJoin()
+    # joinNow()
+    closing()
+
+def wed_sub4():
+    driver = webdriver.Chrome() # service=service, 
+    Glogin(mail_address, passgoog)
+    driver.get(wednesdaylink4)
+    turnOffMicCam()
+    AskToJoin()
+    # joinNow()
+    closing()
+
+def thur_sub1():
+    driver = webdriver.Chrome() # service=service,
+    Glogin(mail_address, passgoog)
+    driver.get(thursdaylink1)
+    turnOffMicCam()
+    AskToJoin()
+    # joinNow()
+    closing()
+
+def thur_sub2():
+    driver = webdriver.Chrome() # service=service,
+    Glogin(mail_address, passgoog)
+    driver.get(thursdaylink2)
+    turnOffMicCam()
+    AskToJoin()
+    # joinNow()
+    closing()
+
+def thur_sub3():
+    driver = webdriver.Chrome() # service=service,
+    Glogin(mail_address, passgoog)
+    driver.get(thursdaylink3)
+    turnOffMicCam()
+    AskToJoin()
+    # joinNow()
+    closing()
+
+def thur_sub4():
+    driver = webdriver.Chrome() # service=service,
+    Glogin(mail_address, passgoog)
+    driver.get(thursdaylink4)
+    turnOffMicCam()
+    AskToJoin()
+    # joinNow()
+    closing()
+
+def fri_sub1():
+    driver = webdriver.Chrome() # service=service,
+    Glogin(mail_address, passgoog)
+    driver.get(fridaylink1)
+    turnOffMicCam()
+    AskToJoin()
+    # joinNow()
+    closing()
+
+def fri_sub2():
+    driver = webdriver.Chrome() # service=service,
+    Glogin(mail_address, passgoog)
+    driver.get(fridaylink2)
+    turnOffMicCam()
+    AskToJoin()
+    # joinNow()
+    closing()
+
+def fri_sub3():
+    driver = webdriver.Chrome() # service=service,
+    Glogin(mail_address, passgoog)
+    driver.get(fridaylink3)
+    turnOffMicCam()
+    AskToJoin()
+    # joinNow()
+    closing()
+
+def fri_sub4():
+    driver = webdriver.Chrome() # service=service,
+    Glogin(mail_address, passgoog)
+    driver.get(fridaylink4)
+    turnOffMicCam()
+    AskToJoin()
+    # joinNow()
+    closing()
+
+def time_scan():
+    
+    # Time checking function
+    # if datetime.today().weekday() == 6: # Change to current Time, 6 is sunday, 0 is monday, figure out the rest.
+    #     print("Guess for current wekday passed the Test.")
+    #     if hour_now == "10": # Change to current Time, from the "input" to 1 hour after in millitary time.
+    #         print("Guess for current hour of the weekday passed the Test.")
+
     if datetime.today().weekday() == 0: # Monday
         if hour_now == "08" or hour_now == "09": # 8am to 10am
-            Glogin(mail_address, passgoog)
-            driver.get(meetinglink1)
-            turnOffMicCam()
-            AskToJoin()
-            # joinNow()
-            closing()
+            mon_sub1()
         if hour_now == "10" or hour_now == "11": # 10am - 12:00pm
-            Glogin(mail_address, passgoog)
-            driver.get(meetinglink2)
-            turnOffMicCam()
-            AskToJoin()
-            # joinNow()
-            closing()
+            mon_sub2()
         if hour_now == "13" or hour_now == "14" and min_now <= "29": # 1:30pm - 2:30pm
-            Glogin(mail_address, passgoog)
-            driver.get(meetinglink3) 
-            turnOffMicCam()
-            AskToJoin()
-            # joinNow()
-            closing()
+            mon_sub3()
         if hour_now == "14" and min_now >= "30" or hour_now == "15" or hour_now == "16" and min_now <= "30": # 2:30pm - 4:30pm
-            Glogin(mail_address, passgoog)
-            driver.get(meetinglink4)
-            turnOffMicCam()
-            AskToJoin()
-            # joinNow()
-            closing()
-        else:
-            driver.close()
-            return pyautogui.alert(text="Bye! Have a nice day!", title="No sessions for now.")
+            mon_sub4()
 
-def first_tue_sub():
     if datetime.today().weekday() == 1: # Tuesday
         if hour_now == "08" or hour_now == "09": # 8am to 10am
-            Glogin(mail_address, passgoog)
-            driver.get(meetinglink1)
-            turnOffMicCam()
-            AskToJoin()
-            # joinNow()
-            closing()
+            tue_sub1()
         if hour_now == "10" or hour_now == "11": # 10am - 12:00pm
-            Glogin(mail_address, passgoog)
-            driver.get(meetinglink2)
-            turnOffMicCam()
-            AskToJoin()
-            # joinNow()
-            closing()
+            tue_sub2()
         if hour_now == "13" or hour_now == "14" and min_now <= "29": # 1:30pm - 2:30pm
-            Glogin(mail_address, passgoog)
-            driver.get(meetinglink3)
-            turnOffMicCam()
-            AskToJoin()
-            # joinNow()
-            closing()
+            tue_sub3()
         if hour_now == "14" and min_now >= "30" or hour_now == "15" or hour_now == "16" and min_now <= "30": # 2:30pm - 4:30pm
-            Glogin(mail_address, passgoog)
-            driver.get(meetinglink4)
-            turnOffMicCam()
-            AskToJoin()
-            # joinNow()
-            closing()
-        else:
-            driver.close()
-            return pyautogui.alert(text="Bye! Have a nice day!", title="No sessions for now.")
+            tue_sub4()
 
-def first_wed_sub():
     if datetime.today().weekday() == 2: # Wednesday
-        if hour_now == "08": # 8am - 9am
-            Glogin(mail_address, passgoog)
-            driver.get(meetinglink6)
-            turnOffMicCam()
-            AskToJoin()
-            # joinNow()
-            closing()
-        if hour_now == "12": # 12:30pm
-            Glogin(mail_address, passgoog)
-            driver.get(meetinglink5)
-            turnOffMicCam()
-            AskToJoin()
-            # joinNow()
-            closing()
-        else:
-            driver.close()
-            return pyautogui.alert(text="Bye! Have a nice day!", title="No sessions for now.")
+        if hour_now == "08" or hour_now == "12": # 12:30pm: # 8am - 9am
+            wed_sub1()
 
-def first_thur_sub():
     if datetime.today().weekday() == 3: # Thursday
         if hour_now == "14" or hour_now == "15" or hour_now == "16": # 2:30pm to 4:30pm
-            Glogin(mail_address, passgoog)
-            driver.get(meetinglink7)
-            turnOffMicCam()
-            AskToJoin()
-            # joinNow()
-            closing()
-        else:
-            driver.close()
-            return pyautogui.alert(text="Bye! Have a nice day!", title="No sessions for now.")
+            thur_sub1()
 
-def first_fri_sub():
     if datetime.today().weekday() == 4: # Friday
         if hour_now == "08" or hour_now == "09": # 8am to 10pm
-            Glogin(mail_address, passgoog)
-            driver.get(meetinglink8)
-            turnOffMicCam()
-            AskToJoin()
-            # joinNow()
-            closing()
-        else:
-            driver.close()
-            return pyautogui.alert(text="Bye! Have a nice day!", title="No sessions for now.")
+            fri_sub1()
 
-first_mon_sub()
-first_tue_sub()
-first_wed_sub()
-first_thur_sub()
-first_fri_sub()
+# Test for Functionality, Comment out function for proper usage of Program.
+# any_sub()
+
+time_scan()
