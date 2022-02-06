@@ -33,6 +33,8 @@ ttk.Label(mainframe, text="Tuesday").grid(column=2, row=0, sticky=N)
 ttk.Label(mainframe, text="Wednesday").grid(column=3, row=0, sticky=N)
 ttk.Label(mainframe, text="Thursday").grid(column=4, row=0, sticky=N)
 ttk.Label(mainframe, text="Friday").grid(column=5, row=0, sticky=N)
+ttk.Label(mainframe, text="Anyday Test").grid(column=7, row=0, sticky=N)
+
 
 ttk.Label(mainframe, text="1st Sub").grid(column=0, row=1, sticky=W)
 ttk.Label(mainframe, text="2nd Sub").grid(column=0, row=2, sticky=W)
@@ -41,6 +43,17 @@ ttk.Label(mainframe, text="4th Sub").grid(column=0, row=4, sticky=W)
 
 
 # Change these Meeting links every week, check for new links.
+
+# # Anytime Test
+# anydaylink1 = StringVar()
+# anydaylink1_entry = ttk.Entry(mainframe, width=7, textvariable=anydaylink1)
+# anydaylink1_entry.grid(column=7, row=1, sticky=(W, E))
+
+# anydaylink1set = StringVar()
+
+# anydaylink1set.set(anydaylink1)
+
+# root.bind("<Return>", any_sub)
 
 # Monday Subjects
 mondaylink1 = StringVar()
@@ -128,7 +141,7 @@ fridaylink4 = StringVar()
 fridaylink4_entry = ttk.Entry(mainframe, width=7, textvariable=fridaylink4)
 fridaylink4_entry.grid(column=5, row=4, sticky=(W, E))
 
-root.mainloop()
+# root.mainloop()
 
 # Selenium Driver variables
 
@@ -164,6 +177,8 @@ min_now = str(min_now_format[14:16])
 
 # Google Meet Functions
 def Glogin(mail, pswrd):
+    
+    driver = webdriver.Chrome()
     # Login Page
     driver.get(
         'https://accounts.google.com/ServiceLogin?hl=en&passive=true&continue=https://www.google.com/&ec=GAZAAQ')
@@ -232,8 +247,31 @@ def closing():
 # Datetime Scheduling of Code and dynamic Meeting link variable Execution.
 #TODO: number out the subs and append the meetinglink entry form there.
 
+def any_sub(anydaylink1set):
+    # Glogin(mail_address, passgoog)
+    driver = webdriver.Chrome()
+    anydaylink1set = str(anydaylink1set)
+    print(anydaylink1set)
+    driver.get(anydaylink1set) # https://coalemus.github.io/Portfolio-Website/
+    turnOffMicCam()
+    AskToJoin()
+    # joinNow()
+    closing()
+
+# Anytime Test
+anydaylink1 = StringVar()
+anydaylink1_entry = ttk.Entry(mainframe, width=7, textvariable=anydaylink1)
+anydaylink1_entry.grid(column=7, row=1, sticky=(W, E))
+
+anydaylink1set = StringVar()
+
+anydaylink1set.set(str(anydaylink1.get))
+
+root.bind("<Return>", any_sub) # any_sub
+
+root.mainloop()
+
 def mon_sub1():
-    driver = webdriver.Chrome() # service=service, 
     Glogin(mail_address, passgoog)
     driver.get(mondaylink1)
     turnOffMicCam()
@@ -242,7 +280,6 @@ def mon_sub1():
     closing()
 
 def mon_sub2():
-    driver = webdriver.Chrome() # service=service, 
     Glogin(mail_address, passgoog)
     driver.get(mondaylink2)
     turnOffMicCam()
@@ -251,7 +288,6 @@ def mon_sub2():
     closing()
 
 def mon_sub3():
-    driver = webdriver.Chrome() # service=service, 
     Glogin(mail_address, passgoog)
     driver.get(mondaylink3)
     turnOffMicCam()
@@ -260,7 +296,6 @@ def mon_sub3():
     closing()
 
 def mon_sub4():
-    driver = webdriver.Chrome() # service=service, 
     Glogin(mail_address, passgoog)
     driver.get(mondaylink4)
     turnOffMicCam()
@@ -269,7 +304,6 @@ def mon_sub4():
     closing()
 
 def tue_sub1():
-    driver = webdriver.Chrome() # service=service, 
     Glogin(mail_address, passgoog)
     driver.get(tuesdaylink1)
     turnOffMicCam()
@@ -278,7 +312,6 @@ def tue_sub1():
     closing()
 
 def tue_sub1():
-    driver = webdriver.Chrome() # service=service, 
     Glogin(mail_address, passgoog)
     driver.get(tuesdaylink2)
     turnOffMicCam()
@@ -287,7 +320,6 @@ def tue_sub1():
     closing()
 
 def tue_sub3():
-    driver = webdriver.Chrome() # service=service, 
     Glogin(mail_address, passgoog)
     driver.get(tuesdaylink3)
     turnOffMicCam()
@@ -296,7 +328,6 @@ def tue_sub3():
     closing()
 
 def tue_sub4():
-    driver = webdriver.Chrome() # service=service, 
     Glogin(mail_address, passgoog)
     driver.get(tuesdaylink4)
     turnOffMicCam()
@@ -305,7 +336,6 @@ def tue_sub4():
     closing()
 
 def wed_sub1():
-    driver = webdriver.Chrome() # service=service, 
     Glogin(mail_address, passgoog)
     driver.get(wednesdaylink1)
     turnOffMicCam()
@@ -314,7 +344,6 @@ def wed_sub1():
     closing()
 
 def wed_sub2():
-    driver = webdriver.Chrome() # service=service, 
     Glogin(mail_address, passgoog)
     driver.get(wednesdaylink2)
     turnOffMicCam()
@@ -323,7 +352,6 @@ def wed_sub2():
     closing()
 
 def wed_sub3():
-    driver = webdriver.Chrome() # service=service, 
     Glogin(mail_address, passgoog)
     driver.get(wednesdaylink3)
     turnOffMicCam()
@@ -332,7 +360,6 @@ def wed_sub3():
     closing()
 
 def wed_sub4():
-    driver = webdriver.Chrome() # service=service, 
     Glogin(mail_address, passgoog)
     driver.get(wednesdaylink4)
     turnOffMicCam()
@@ -341,7 +368,6 @@ def wed_sub4():
     closing()
 
 def thur_sub1():
-    driver = webdriver.Chrome() # service=service,
     Glogin(mail_address, passgoog)
     driver.get(thursdaylink1)
     turnOffMicCam()
@@ -350,7 +376,6 @@ def thur_sub1():
     closing()
 
 def thur_sub2():
-    driver = webdriver.Chrome() # service=service,
     Glogin(mail_address, passgoog)
     driver.get(thursdaylink2)
     turnOffMicCam()
@@ -359,7 +384,6 @@ def thur_sub2():
     closing()
 
 def thur_sub3():
-    driver = webdriver.Chrome() # service=service,
     Glogin(mail_address, passgoog)
     driver.get(thursdaylink3)
     turnOffMicCam()
@@ -368,7 +392,6 @@ def thur_sub3():
     closing()
 
 def thur_sub4():
-    driver = webdriver.Chrome() # service=service,
     Glogin(mail_address, passgoog)
     driver.get(thursdaylink4)
     turnOffMicCam()
@@ -377,7 +400,6 @@ def thur_sub4():
     closing()
 
 def fri_sub1():
-    driver = webdriver.Chrome() # service=service,
     Glogin(mail_address, passgoog)
     driver.get(fridaylink1)
     turnOffMicCam()
@@ -386,7 +408,6 @@ def fri_sub1():
     closing()
 
 def fri_sub2():
-    driver = webdriver.Chrome() # service=service,
     Glogin(mail_address, passgoog)
     driver.get(fridaylink2)
     turnOffMicCam()
@@ -395,7 +416,6 @@ def fri_sub2():
     closing()
 
 def fri_sub3():
-    driver = webdriver.Chrome() # service=service,
     Glogin(mail_address, passgoog)
     driver.get(fridaylink3)
     turnOffMicCam()
@@ -404,7 +424,6 @@ def fri_sub3():
     closing()
 
 def fri_sub4():
-    driver = webdriver.Chrome() # service=service,
     Glogin(mail_address, passgoog)
     driver.get(fridaylink4)
     turnOffMicCam()
@@ -419,6 +438,10 @@ def time_scan():
     #     print("Guess for current wekday passed the Test.")
     #     if hour_now == "10": # Change to current Time, from the "input" to 1 hour after in millitary time.
     #         print("Guess for current hour of the weekday passed the Test.")
+
+    if datetime.today().weekday() == 6:
+        if hour_now == "13": 
+            any_sub()
 
     if datetime.today().weekday() == 0: # Monday
         if hour_now == "08" or hour_now == "09": # 8am to 10am
