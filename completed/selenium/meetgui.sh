@@ -6,16 +6,16 @@ do
 clear
 echo "Started at $dt"
 echo "Exiting script if today is a weekend..."
-if [[ $DOW = 0 ]] 
+if [[ $DOW = 6 ]] # Saturday
     then exit
 fi
-if [[ $DOW = 1 ]]
+if [[ $DOW = 7 ]] # Sunday
     then exit
 fi
 echo "."
 dt=`date '+%d/%m/%Y_%H:%M:%S'`
 echo "Starting script..."
-/bin/python "/home/joey/Joey-Repositories/Python-Projects/completed/selenium/meetgui.py"
+/bin/python "/home/joey/JoeyRepositories/Python-Projects/completed/selenium/meetgui.py"
 echo "Ending script..."
 echo "Completed at $dt"
 echo "waiting for 40 minutes..."
