@@ -34,11 +34,11 @@ meetinglink8 = "https://meet.google.com/amd-opoq-bwb"
 
 # Selenium Driver variables
 
-CHROMEDRIVER_PATH = "/usr/bin/chromedriver"
-brave_path = "/usr/share/applications/google-chrome.desktop"
+driver_path = "/usr/bin/chromedriver"
+browser_path = "/usr/share/applications/google-chrome.desktop"
 
 opt = Options()
-opt.binary_location = brave_path # ESSENTIAL
+opt.binary_location = browser_path # ESSENTIAL
 # opt.add_argument("--incognito") OPTIONAL
 # opt.add_argument("--headless") OPTIONAL
 # opt.add_argument('--start-maximized')
