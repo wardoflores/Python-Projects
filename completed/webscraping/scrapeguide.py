@@ -37,10 +37,10 @@ with open('/home/joey/JoeyRepositories/Portfolio-Website/index.html', 'r') as ht
         
         i_thing = i.text # i.{tag}.{attribute}
         i_thing2 = i.text # i.{tag}.{attribute} | could add .split()[-1]
-        
+
         # print(i_thing)
         # print(i_thing2)
 
         print(f'{i_thing} costs {i_thing2}')
-    
+
     # print(div_tags)
