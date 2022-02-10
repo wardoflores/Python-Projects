@@ -145,11 +145,11 @@ fridaylink4_entry.grid(column=5, row=4, sticky=(W, E))
 
 # Selenium Driver variables
 
-CHROMEDRIVER_PATH = "/usr/bin/chromedriver"
-brave_path = "/usr/share/applications/google-chrome.desktop"
+driver_path = "/usr/bin/chromedriver"
+browser_path = "/usr/share/applications/google-chrome.desktop"
 
 opt = Options()
-opt.binary_location = brave_path
+opt.binary_location = browser_path
 # opt = webdriver.ChromeOptions()
 # opt.add_argument("--incognito") OPTIONAL
 # opt.add_argument("--headless") OPTIONAL
