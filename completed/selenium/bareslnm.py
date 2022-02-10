@@ -6,18 +6,18 @@ from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 
 driver_path = "/home/joey/Drivers/chromedriver"
-brave_path = "/home/joey/.cache/yay/brave-bin/brave-browser.desktop"
+browser_path = "/usr/share/applications/google-chrome.desktop"
 
 opt = Options()
-opt.binary_location = brave_path
+opt.binary_location = browser_path
 # opt.add_argument("--incognito") OPTIONAL
 # opt.add_argument("--headless") OPTIONAL
-opt.add_argument('--start-maximized')
+# opt.add_argument('--start-maximized')
 opt.add_experimental_option('excludeSwitches', ['enable-logging'])
 opt.add_argument('--disable-blink-features=AutomationControlled')
 
 # Create new Instance of Brave
-browser = webdriver.Chrome(executable_path=driver_path, options=opt)
+browser = webdriver.Chrome()
 
 browser.get("https://www.google.com")
 
