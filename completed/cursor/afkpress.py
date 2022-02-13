@@ -7,6 +7,6 @@ import pyautogui
 while True:
     pyautogui.press('shift')
     time.sleep(5)
-    print("pressing shift")
+    print("pressing shift in 5 sec intervals")
     pyautogui.press('shift')
     time.sleep(5)
