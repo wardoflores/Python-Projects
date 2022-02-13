@@ -5,7 +5,8 @@ import time
 import pyautogui
 
 while True:
-    pyautogui.press('F13')
+    pyautogui.press('shift')
     time.sleep(5)
-    pyautogui.press('F13')
+    print("pressing shift")
+    pyautogui.press('shift')
     time.sleep(5)
