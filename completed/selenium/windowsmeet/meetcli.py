@@ -107,22 +107,6 @@ def closing():
 # login to Google account
 Glogin(mail_address, passgoog)
  
-# If code is not constant,
-# Prompt asks for meeting link (practice link: https://meet.google.com/xby-zehb-ncf)
- 
-# TODO: Automate scraping for meeting room code,
-#  script a link scraper and append link here.
- 
-# pyautogui.locateOnScreen('meetingcode.png', region=(0,0,0,0))
-# pyautogui.doubleClick()
-# pyautogui.hotkey()
-# pyautogui.typewrite() paste into input prompt
- 
-# If code is constant,
-# Comment 1st meetinglink variable, and uncomment 2nd meetinglink variable.
- 
-# meetinglink = pyautogui.prompt(title="Google meet automation", text="Input meeting link:")
- 
 meetinglink1 = "https://meet.google.com/ojc-ykmb-wph" # Monday Tuesday
 meetinglink2 = "https://meet.google.com/hdi-yygo-sye" # Monday Tuesday
 meetinglink3 = "https://meet.google.com/amd-opoq-bwb" # Monday Tuesday
@@ -136,95 +120,93 @@ meetinglink7 = "https://meet.google.com/sbk-jswq-rpm" # Thursday
  
 meetinglink8 = "https://meet.google.com/amd-opoq-bwb" # Friday
  
-def first_mon_sub():
+# Datetime Scheduling of Code and dynamic Meeting link variable Execution
+def mon_sub():
+    driver = webdriver.Chrome() # service=service, 
+    Glogin(mail_address, passgoog)
+    driver.get(meetinglink1)
+    turnOffMicCam()
+    AskToJoin()
+    # joinNow()
+    closing()
+
+def tue_sub():
+    driver = webdriver.Chrome() # service=service, 
+    Glogin(mail_address, passgoog)
+    driver.get(meetinglink1)
+    turnOffMicCam()
+    AskToJoin()
+    # joinNow()
+    closing()
+
+def wed_sub():
+    driver = webdriver.Chrome() # service=service, 
+    Glogin(mail_address, passgoog)
+    driver.get(meetinglink6)
+    turnOffMicCam()
+    AskToJoin()
+    # joinNow()
+    closing()
+
+def thur_sub():
+    driver = webdriver.Chrome() # service=service,
+    Glogin(mail_address, passgoog)
+    driver.get(meetinglink7)
+    turnOffMicCam()
+    AskToJoin()
+    # joinNow()
+    closing()
+
+def fri_sub():
+    driver = webdriver.Chrome() # service=service,
+    Glogin(mail_address, passgoog)
+    driver.get(meetinglink8)
+    turnOffMicCam()
+    AskToJoin()
+    # joinNow()
+    closing()
+
+def time_scan():
+    
+    # Time checking function
+    # if datetime.today().weekday() == 6: # Change to current Time, 6 is sunday, 0 is monday, figure out the rest.
+    #     print("Guess for current wekday passed the Test.")
+    #     if hour_now == "10": # Change to current Time, from the "input" to 1 hour after in millitary time.
+    #         print("Guess for current hour of the weekday passed the Test.")
+
     if datetime.today().weekday() == 0: # Monday
-        if hour_now == "08": # 8am
-            driver.get(meetinglink1) # 8am to 10am
-            turnOffMicCam()
-            AskToJoin()
-            joinNow()
-            closing()
-        if hour_now == "10": # 10am - 12:00pm
-            driver.get(meetinglink2)
-            turnOffMicCam()
-            AskToJoin()
-            joinNow()
-            closing()
-        if hour_now == "13": # 1:30pm - 2:30pm
-            driver.get(meetinglink3) 
-            turnOffMicCam()
-            AskToJoin()
-            joinNow()
-            closing()
-        if hour_now == "14": # 2:30pm - 4:30pm
-            driver.get(meetinglink4)
-            turnOffMicCam()
-            AskToJoin()
-            joinNow()
-            closing()
- 
-def first_tue_sub():
+        if hour_now == "08" or hour_now == "09": # 8am to 10am
+            mon_sub()
+        if hour_now == "10" or hour_now == "11": # 10am - 12:00pm
+            mon_sub()
+        if hour_now == "13" or hour_now == "14" and min_now <= "29": # 1:30pm - 2:30pm
+            mon_sub()
+        if hour_now == "14" and min_now >= "30" or hour_now == "15" or hour_now == "16" and min_now <= "30": # 2:30pm - 4:30pm
+            mon_sub()
+
     if datetime.today().weekday() == 1: # Tuesday
-         if hour_now == "08": # 8am to 10am
-            driver.get(meetinglink1)
-            turnOffMicCam()
-            AskToJoin()
-            joinNow()
-            closing()
-         if hour_now == "10": # 10am - 12:00pm
-            driver.get(meetinglink2)
-            turnOffMicCam()
-            AskToJoin()
-            joinNow()
-            closing()
-         if hour_now == "13": # 1:30pm - 2:30pm
-            driver.get(meetinglink3)
-            turnOffMicCam()
-            AskToJoin()
-            joinNow()
-            closing()
-         if hour_now == "14": # 2:30pm - 4:30pm
-            driver.get(meetinglink4)
-            turnOffMicCam()
-            AskToJoin()
-            joinNow()
-            closing()
- 
-def first_wed_sub():
+        if hour_now == "08" or hour_now == "09": # 8am to 10am
+            tue_sub()
+        if hour_now == "10" or hour_now == "11": # 10am - 12:00pm
+            tue_sub()
+        if hour_now == "13" or hour_now == "14" and min_now <= "29": # 1:30pm - 2:30pm
+            tue_sub()
+        if hour_now == "14" and min_now >= "30" or hour_now == "15" or hour_now == "16" and min_now <= "30": # 2:30pm - 4:30pm
+            tue_sub()
+
     if datetime.today().weekday() == 2: # Wednesday
-         if hour_now == "08": # 8am - 9am
-            driver.get(meetinglink6)
-            turnOffMicCam()
-            AskToJoin()
-            joinNow()
-            closing()
-         if hour_now == "08": # 12:30pm
-            driver.get(meetinglink5)
-            turnOffMicCam()
-            AskToJoin()
-            joinNow()
-            closing()
- 
-def first_thur_sub():
+        if hour_now == "08" or hour_now == "12": # 12:30pm: # 8am - 9am
+            wed_sub()
+
     if datetime.today().weekday() == 3: # Thursday
-         if hour_now == "14": # 2:30pm to 4:30pm
-            driver.get(meetinglink7)
-            turnOffMicCam()
-            AskToJoin()
-            joinNow()
-            closing()
- 
-def first_fri_sub():
+        if hour_now == "14" or hour_now == "15" or hour_now == "16": # 2:30pm to 4:30pm
+            thur_sub()
+
     if datetime.today().weekday() == 4: # Friday
-         if hour_now == "08": # 8am to 10pm
-            driver.get(meetinglink8)
-            turnOffMicCam()
-            AskToJoin()
-            joinNow()
-            closing()
- 
-first_mon_sub()
-first_tue_sub()
-first_wed_sub()
-first_thur_sub()
-first_fri_sub()
+        if hour_now == "08" or hour_now == "09": # 8am to 10pm
+            fri_sub()
+
+# Test for Functionality, Comment out function for proper usage of Program.
+# any_sub()
+
+time_scan()
