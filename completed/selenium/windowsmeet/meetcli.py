@@ -105,7 +105,7 @@ def closing():
         pass
  
 # login to Google account
-Glogin(mail_address, passgoog)
+# Glogin(mail_address, passgoog)
  
 meetinglink1 = "https://meet.google.com/ojc-ykmb-wph" # Monday Tuesday
 meetinglink2 = "https://meet.google.com/hdi-yygo-sye" # Monday Tuesday
