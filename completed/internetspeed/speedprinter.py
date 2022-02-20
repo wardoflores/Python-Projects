@@ -7,7 +7,11 @@ import time
 import datetime
 
 
-s = speedtest.Speedtest()
+try:
+    s = speedtest.Speedtest()
+
+except ConfigRetrievalError:
+    print("No connection.")
 
 time_now = datetime.datetime.now().strftime("%H:%M:%S")
 
@@ -17,4 +21,6 @@ while True:
 
 
     print(f"time: {time_now}, downspeed: {downspeed} Mb/s, upspeed: {upspeed} Mb/s")
+
+
         
