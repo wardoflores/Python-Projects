@@ -1,0 +1,50 @@
+ The ?
+matches zero or one of the preceding group.
+
+ the *
+matches zero or more of the preceding group.
+
+ the +
+matches one or more of the precedding group.
+
+ the {n}
+matches exactly n of the preceding group.
+
+ the {n,}
+matches n or more of the preceding group.
+
+ the {,m}
+matches 0 to m of the preceding group.
+
+ the {n,m}
+matches at least n and at most m of the preceding group.
+
+   {n,m}?
+    *?
+    +?
+performs a nongreedy match of the preceding group.
+
+^spam
+means the string begins with spam.
+
+spam$
+means the string ends with spam.
+
+.
+matches any character, except newline characters.
+
+    \d
+    \w
+    \s
+matches a digit, word, and space character, respectively.
+
+    \D
+    \W
+    \S
+matches anything except a digit, word, and space, respectively.
+
+[abc]
+matches any character between the brackets (such as a, b , or c).
+
+[^abc]
+matches any character that isn't between the brackets (such as a, b , or c).

@@ -1,0 +1,78 @@
+Python 3.8.6 (Stable) (in-use)
+
+*File handling Libraries
+
+py2exe - done
+python-docx - done
+Boost - done
+conan - done
+
+
+*Input Libraries
+
+pyautogui - done
+pynput - done
+asyncio - done
+speechrecognition - done
+pywal - done
+
+
+*Data science Libraries
+
+tensorflow - done
+tflearn - done
+keras - done
+transformers - done
+torch - done
+scipy - done
+    scikit - done
+    matplotlib - done
+        seaborn - done
+
+    pandas - done
+    numpy - done
+    scrapy - done (need specific Twisted wheel ver. downloaded,
+                    {https://www.lfd.uci.edu/~gohlke/pythonlibs/#twisted})
+threadpoolctl - done
+xgboost - done
+gensim - done
+
+
+*Natural language processing libraries
+
+nltk - done
+ChatterBot - done (ver. 1.0.4, not latest)
+ChatterBot_corpus - done 
+sqlalchemy - done (ver. 1.2 is compatible for ChatterBot 1.0.4, not latest)
+spacy - done (downloaded english model)
+
+
+*API libraries
+
+Discord.py - done
+    discord.py[voice] - done
+tweepy - done
+gkeepapi - done
+praw - done
+wolframalpha - done
+google - done
+wikipedia - done
+gTTS - done
+
+*Web libraries
+
+Django - done
+beautifulsoup4 - dones
+b4 - done
+googleimagedownloader - done
+speedtest-clif - done
+flask - done
+iexfinance - done
+
+*media player libraries
+
+ffmpeg -done
+youtube-dl -done
+spotdl - done
+playsound - done
+pyaudio - done (need specific Twisted wheel ver. downloaded, {https://www.lfd.uci.edu/~gohlke/pythonlibs})
