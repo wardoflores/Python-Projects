@@ -1,3 +1,5 @@
+#!/bin/zsh
+
 import re
 
 xmasregex = re.compile(r'\d\s\w+')

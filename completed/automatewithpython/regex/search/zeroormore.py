@@ -1,3 +1,5 @@
+#!/bin/zsh
+
 import re
 
 batregex = re.compile(r' Bat(wo)*man')

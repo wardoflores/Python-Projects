@@ -1,3 +1,5 @@
+#!/bin/zsh
+
 from itertools import count
 
 

@@ -1,4 +1,5 @@
-#! python3
+#!/bin/zsh
+
 while True:
     print("Enter your age: ")
     age = input()

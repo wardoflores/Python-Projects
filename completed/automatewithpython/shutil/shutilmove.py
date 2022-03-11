@@ -1,3 +1,5 @@
+#!/bin/zsh
+
 import shutil, os
 
 shutil.move("C:\\bacon.txt", "C:\\eggs")

@@ -1,3 +1,5 @@
+#!/bin/zsh
+
 import re
 
 robocop = re.compile(r'robocop', re.I)

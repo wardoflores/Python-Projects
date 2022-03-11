@@ -1,3 +1,5 @@
+#!/bin/zsh
+
 import re
 
 wholestringisnum = re.compile(r'^]d+$')

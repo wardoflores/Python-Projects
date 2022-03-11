@@ -1,3 +1,5 @@
+#!/bin/zsh
+
 import os
 import send2trash
 

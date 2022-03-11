@@ -1,4 +1,6 @@
-# upgrade using for loops
+#!/bin/zsh
+
+# TODO: upgrade using for loops
 
 def userinput():
     

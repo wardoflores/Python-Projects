@@ -1,3 +1,5 @@
+#!/bin/zsh
+
 '''
 Say you have the boring task of filling out many forms in a web page or
 software with several text fields. 

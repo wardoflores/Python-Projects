@@ -1,3 +1,5 @@
+#!/bin/zsh
+
 import re
 
 haregex = re.compile(r'(Ha){3,5}')

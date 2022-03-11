@@ -1,3 +1,5 @@
+#!/bin/zsh
+
 '''
 Project: Phone Number and Email Address Extractor
 

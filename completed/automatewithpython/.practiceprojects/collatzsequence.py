@@ -1,3 +1,5 @@
+#!/bin/zsh
+
 '''
 is even, then collatz()
 should print number // 2

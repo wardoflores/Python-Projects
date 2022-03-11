@@ -1,3 +1,5 @@
+#!/bin/zsh
+
 '''
 Regex Version of strip()
 

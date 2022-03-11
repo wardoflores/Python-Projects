@@ -1,3 +1,5 @@
+#!/bin/zsh
+
 baconfile = open(r'automatewithpython\file\practicetxts\baconfile.txt', 'w')
 baconfile.write('Hello World!\n')
 baconfile.close()

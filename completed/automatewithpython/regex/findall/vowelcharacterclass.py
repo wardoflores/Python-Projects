@@ -1,3 +1,5 @@
+#!/bin/zsh
+
 import re
 
 vowelregex = re.compile(r'[aeiouAEIOU]')

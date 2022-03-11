@@ -1,3 +1,5 @@
+#!/bin/zsh
+
 import re
 
 phone_number_regex = re.compile(r'(\d\d\d)-(\d\d\d-\d\d\d\d)')

@@ -1,3 +1,5 @@
+#!/bin/zsh
+
 import re
 
 heroregex = re.compile(r'Batman|Tina Fey')

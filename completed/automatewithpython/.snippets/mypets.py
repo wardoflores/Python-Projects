@@ -1,4 +1,5 @@
-#! python3
+#!/bin/zsh
+
 mypets = ["Susie", "Oreo", "Po"]
 print("Enter a pet name: ")
 name = input()

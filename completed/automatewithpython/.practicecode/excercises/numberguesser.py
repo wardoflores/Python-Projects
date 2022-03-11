@@ -1,4 +1,4 @@
-#! python3
+#!/bin/zsh
 import random
 
 secretnumber = random.randint(1,20)

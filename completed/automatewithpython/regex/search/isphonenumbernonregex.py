@@ -1,3 +1,5 @@
+#!/bin/zsh
+
 def isphonenumber(text):
     if len(text) != 12:
         return False

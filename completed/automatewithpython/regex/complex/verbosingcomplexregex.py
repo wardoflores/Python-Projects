@@ -1,3 +1,5 @@
+#!/bin/zsh
+
 import re
 
 phoneregex = re.compile(

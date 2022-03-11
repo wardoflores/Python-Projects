@@ -1,3 +1,5 @@
+#!/bin/zsh
+
 # Code will copy a Folder.
 
 import shutil, os

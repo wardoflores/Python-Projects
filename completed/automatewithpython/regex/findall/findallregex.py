@@ -1,3 +1,5 @@
+#!/bin/zsh
+
 import re
 
 phonenumregex = re.compile(r'\d\d\d-\d\d\d-\d\d\d\d')

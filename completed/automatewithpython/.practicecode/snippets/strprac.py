@@ -1,3 +1,5 @@
+#!/bin/zsh
+
 b = "Hello, World!"
 print(b[2:5]) # shows the chars 2 to 5 # Outputs llo
 

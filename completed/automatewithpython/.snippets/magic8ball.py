@@ -1,4 +1,5 @@
-#! python3
+#!/bin/zsh
+
 import random
 
 messages = ["It is certain",

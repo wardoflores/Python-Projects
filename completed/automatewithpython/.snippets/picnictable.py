@@ -1,4 +1,5 @@
-#! python3
+#!/bin/zsh
+
 def printpicnic(itemsdict, leftwidth, rightwidth):
     print('picnic items'.center(leftwidth + rightwidth, '-'))
 

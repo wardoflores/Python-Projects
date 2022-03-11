@@ -1,3 +1,5 @@
+#!/bin/zsh
+
 import re
 
 nameregex = re.compile(r'First name: (.*) Last name: (.*)') # Greedy pattern.

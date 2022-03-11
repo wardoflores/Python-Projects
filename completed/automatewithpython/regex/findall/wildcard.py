@@ -1,3 +1,5 @@
+#!/bin/zsh
+
 import re
 
 atregex = re.compile(r'.at')

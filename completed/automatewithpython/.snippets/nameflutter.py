@@ -1,4 +1,5 @@
-#! python3
+#!/bin/zsh
+
 name = str(input("what is your name: "))
 
 def process(name):

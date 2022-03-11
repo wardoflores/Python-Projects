@@ -1,4 +1,5 @@
-#! python3
+#!/bin/zsh
+
 catnames = []
 
 while True:

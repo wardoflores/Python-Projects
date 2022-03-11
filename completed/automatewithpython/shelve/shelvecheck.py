@@ -1,3 +1,5 @@
+#!/bin/zsh
+
 import shelve
 
 shelffile = shelve.open('mydata')

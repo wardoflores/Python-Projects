@@ -1,3 +1,5 @@
+#!/bin/zsh
+
 import os
 
 print(os.path.abspath(.)) # Argument returns absolute path of itself.

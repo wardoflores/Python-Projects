@@ -1,3 +1,5 @@
+#!/bin/zsh
+
 '''
 Extending the Multiclipboard
 

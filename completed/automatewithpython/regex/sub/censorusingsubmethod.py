@@ -1,3 +1,5 @@
+#!/bin/zsh
+
 import re
 
 namesregex = re.compile(r'Agent \w+')

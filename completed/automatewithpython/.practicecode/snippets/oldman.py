@@ -1,3 +1,5 @@
+#!/bin/zsh
+
 while True:
     OldmanAge = input()
 

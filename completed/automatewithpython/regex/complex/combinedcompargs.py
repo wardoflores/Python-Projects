@@ -1,3 +1,5 @@
+#!/bin/zsh
+
 import re
 
 someregexvalue = re.compile(r'foo', re.IGNORECASE | re.DOTALL | re.VERBOSE)

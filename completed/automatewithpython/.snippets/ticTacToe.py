@@ -1,4 +1,5 @@
-#! python3
+#!/bin/zsh
+
 theBoard = {'top-L': ' ', 'top-m': ' ', 'top-R': ' ',
  'mid-L': ' ', 'mid-m': ' ', 'mid-R': ' ',
  'low-L': ' ', 'low-m': ' ', 'low-R': ' '}

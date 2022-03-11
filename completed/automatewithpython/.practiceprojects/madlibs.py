@@ -1,3 +1,5 @@
+#!/bin/zsh
+
 '''
 Mad Libs
 

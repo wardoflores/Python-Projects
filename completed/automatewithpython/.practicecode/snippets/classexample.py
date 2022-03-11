@@ -1,3 +1,5 @@
+#!/bin/zsh
+
 class Person:
   def __init__(self, name, age):
     mysillyobject.name = name
