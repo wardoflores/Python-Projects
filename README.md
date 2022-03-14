@@ -10,8 +10,6 @@ Repository for Python Projects.
 
 ## List of Projects
 
-### Completed
-
 - Automate the boring stuff with Python
   - Notes from the book.
 - Birthday Wisher
