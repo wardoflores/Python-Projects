@@ -15,7 +15,7 @@ fi
 echo "."
 dt=`date '+%d/%m/%Y_%H:%M:%S'`
 echo "Starting script..."
-/bin/python "/home/joey/JoeyRepositories/Python-Projects/completed/selenium/meetgui.py"
+/bin/python "/home/joey/JoeyRepositories/Python-Projects/selenium/meetgui.py"
 echo "Ending script..."
 echo "Completed at $dt"
 echo "waiting for 40 minutes..."

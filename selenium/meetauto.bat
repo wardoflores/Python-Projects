@@ -9,7 +9,7 @@ for /f %%i in ('powershell ^(get-date^).DayOfWeek') do set dow=%%i
 if %dow% == Saturday goto exit 
 if %dow% == Sunday goto exit
 echo Starting script...
-python "C:\Users\Flores\Joey-Repositories\Python-Projects\completed\selenium\meetcli.py"
+python "C:\Users\Flores\Joey-Repositories\Python-Projects\selenium\meetcli.py"
 echo.
 echo Ending script...
 echo Completed: %date% %time%
