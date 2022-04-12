@@ -7,9 +7,12 @@ with open("/home/joey/.config/waybar/config", "r", encoding="utf-8") as barconfi
 
 prefix = "        \"format-alt\": "
 
+
+
+print(customword[25])
 phrase = input("Write new phrase here (Reset Window Manager to display after): ")
 
-customword[26] = (prefix + "\"" + phrase + "\"" + ",\n")
+customword[25] = (prefix + "\"" + phrase + "\"" + ",\n")
 
 with open('/home/joey/.config/waybar/config', 'w', encoding='utf-8') as barconfig:
     barconfig.writelines(customword)
