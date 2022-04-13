@@ -40,7 +40,7 @@ print(banner1.center(os.get_terminal_size().columns))
 time.sleep(1)
 
 
-def happy_birthday():
+def main():
 
     first_name = input("[+] First name: ")
     print("\n")
@@ -74,5 +74,5 @@ def happy_birthday():
     print("Have some fun today :) ".center(os.get_terminal_size().columns))
     print("###########################################\n".center(os.get_terminal_size().columns))
 
-
-happy_birthday()
+if __name__ == '__main__' :
+    main()

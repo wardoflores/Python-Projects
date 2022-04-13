@@ -27,7 +27,7 @@ print("2.Subtract")
 print("3.Multiply")
 print("4.Divide")
 
-def runtime():
+def main():
 
     while True:
         # Take input from the user
@@ -59,7 +59,7 @@ def runtime():
         if end == '1':
             return exit()
         else:
-            runtime()
+            main()
 
-runtime()
-
+if __name__ == '__main__' :
+    main()

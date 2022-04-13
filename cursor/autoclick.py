@@ -13,8 +13,7 @@ delay = 0.001 # Edit for rate of clicks
 button = Button.left
 start_stop_key = KeyCode(char='=')
 exit_key = KeyCode(char='-')
- 
- 
+
 class ClickMouse(threading.Thread):
     def __init__(self, delay, button):
         super(ClickMouse, self).__init__()
@@ -40,12 +39,6 @@ class ClickMouse(threading.Thread):
                 time.sleep(self.delay)
             time.sleep(0.1)
  
- 
-mouse = Controller()
-thread = ClickMouse(delay, button)
-thread.start()
- 
- 
 def on_press(key):
     if key == start_stop_key:
         if thread.running:
@@ -55,6 +48,7 @@ def on_press(key):
     elif key == exit_key:
         thread.exit()
         listener.stop()
- 
-with Listener(on_press=on_press) as listener:
-    listener.join()
+
+if __name__ == "__main__":
+    with Listener(on_press=on_press) as listener:
+        listener.join()
