@@ -5,7 +5,7 @@ with open("/home/joey/.config/waybar/config", "r", encoding="utf-8") as barconfi
 
 # print(customword)
 
-prefix = "        \"format-alt\": "
+prefix = "        \"format\": "
 
 
 
