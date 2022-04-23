@@ -1,4 +1,4 @@
-cd /home/joey/Joey-Repositories/Python-Projects/fileorganizer/linuxfiles
+cd /home/joey/coalemus/Python-Projects/fileorganizer/linuxfiles
 while :
 do
 echo Put path to be organized here:
