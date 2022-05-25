@@ -6,7 +6,7 @@ from bs4 import BeautifulSoup
 
 # --- example 1 Basic Scraping
 
-with open('/home/joey/JoeyRepositories/Portfolio-Website/index.html', 'r') as html_file: # Scrape local file
+with open('/home/joey/coalemus/Portfolio-Website/index.html', 'r') as html_file: # Scrape local file
     content = html_file.read() # Prints all the html file contents
     # print(content)
 
@@ -25,7 +25,7 @@ with open('/home/joey/JoeyRepositories/Portfolio-Website/index.html', 'r') as ht
 
 # --- example 2 Printing specific div classes
 
-with open('/home/joey/JoeyRepositories/Portfolio-Website/index.html', 'r') as html_file: # Scrape local file
+with open('/home/joey/coalemus/Portfolio-Website/index.html', 'r') as html_file: # Scrape local file
     content = html_file.read() # Prints all the html file contents
     # print(content)
 
