@@ -3,7 +3,7 @@ import socket
 import typing
 
 from collections import defaultdict
-from headers import Headers
+from .headers import Headers
 
 def iter_lines(sock: socket.socket, bufsize: int = 16_384) -> typing.Generator[bytes, None, bytes]:
     """Given a socket, read all the individual CRLF-separated lines
