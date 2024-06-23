@@ -13,10 +13,7 @@ for guessestaken in range(1,7):
         print("Your guess is too low.")
     elif guess > secretnumber:
         print("Your guess is too high.")
-    else:
-        break
-
-    if guess == secretnumber:
+    elif guess == secretnumber:
         print("Good job! You guessed my number in " + str(guessestaken) + " guesses!")
     else:
         print("Nope. The numer I was thinking of was " + str(secretnumber))
