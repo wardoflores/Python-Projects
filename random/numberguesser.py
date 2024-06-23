@@ -3,9 +3,10 @@
 import random
 
 secretnumber = random.randint(1,20)
-print("I am thinking of a numer between 1 and 20")
+print("I am thinking of a number between 1 and 20")
 
 for guessestaken in range(1,7):
+    guess = 0
     print("Take a guess.")
     guess = int(input())
 
@@ -16,4 +17,5 @@ for guessestaken in range(1,7):
     elif guess == secretnumber:
         print("Good job! You guessed my number in " + str(guessestaken) + " guesses!")
     else:
-        print("Nope. The numer I was thinking of was " + str(secretnumber))
+        print("Nope. The number I was thinking of was " + str(secretnumber))
+
